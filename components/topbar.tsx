@@ -3,9 +3,8 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { AnimatedStatus } from "./animated-status"
+import { SettingsToggles } from "./settings-toggles" // Mengimpor tombol toggle yang baru
 
-// Kita gunakan menu yang sama, tapi tanpa ikon agar rapi secara horizontal
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -21,13 +20,12 @@ export function Topbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-6xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         
-        {/* Bagian Kiri: Profil & Animasi Status yang baru kita buat */}
+        {/* Kiri: Nama Saja (Teks animasi dihapus agar tidak merusak layout menu) */}
         <div className="flex items-center gap-6">
           <h2 className="font-bold text-lg whitespace-nowrap">Daffa Pratama</h2>
-          <AnimatedStatus className="hidden md:flex w-32" />
         </div>
         
-        {/* Bagian Tengah: Menu Navigasi Horizontal */}
+        {/* Tengah: Menu Navigasi */}
         <nav className="hidden md:flex items-center gap-1">
           {menuItems.map((item) => (
             <Link
@@ -45,11 +43,9 @@ export function Topbar() {
           ))}
         </nav>
 
-        {/* Bagian Kanan: Tempat Toggle Bahasa, Tema & Layout (Akan kita isi nanti) */}
-        <div className="flex items-center gap-4">
-           <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Settings</p>
-           {/* Placeholder untuk tombol-tombol toggle */}
-           <div className="h-8 w-24 bg-zinc-900/50 rounded animate-pulse" />
+        {/* Kanan: Toggles Pengaturan yang baru kita perbarui */}
+        <div className="flex items-center">
+           <SettingsToggles className="flex-row" />
         </div>
 
       </div>
