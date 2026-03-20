@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { CommandPalette } from "@/components/command-palette"; // Mengimpor CommandPalette
+import { FloatingButtons } from "@/components/floating-buttons"; // Mengimpor FloatingButtons
 
-// Mengatur font Geist Sans yang bersih dan modern
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,16 +28,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        // Menambahkan font-sans dan antialiased untuk render teks yang sempurna
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark" // Mewajibkan dark mode sebagai default
-          enableSystem={false} // Mengabaikan system setting agar dark mode terkunci
+          defaultTheme="system" // Kembali ke system theme
+          enableSystem
           disableTransitionOnChange
         >
+          {/* Mendaftarkan Command Palette ke Layout */}
+          <CommandPalette />
+          
           {children}
+          
+          {/* Mendaftarkan Floating Buttons ke Layout */}
+          <FloatingButtons />
         </ThemeProvider>
       </body>
     </html>
