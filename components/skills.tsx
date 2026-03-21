@@ -57,10 +57,7 @@ export function Skills() {
       {/* Baris Tombol Filter */}
       <div className="flex flex-wrap items-center gap-2.5">
         {categories.map((category) => {
-          const count = category === "All" 
-            ? skillsData.length 
-            : skillsData.filter(s => s.categories.includes(category)).length
-
+          const count = category === "All" ? skillsData.length : skillsData.filter(s => s.categories.includes(category)).length
           const isActive = activeCategory === category
 
           return (
@@ -68,17 +65,20 @@ export function Skills() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                // Ukuran dibesarkan ke text-sm (14px) dan padding px-4 py-2
                 "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border",
                 isActive 
-                  ? "bg-yellow-400 border-yellow-400 text-zinc-950 shadow-md" 
+                  // PERBAIKAN: Hitam pekat di Light, Putih bersih di Dark
+                  ? "bg-zinc-950 dark:bg-white border-zinc-950 dark:border-white text-white dark:text-zinc-950 shadow-md" 
                   : "bg-zinc-50 dark:bg-zinc-900/50 border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
               )}
             >
               {category}
               <span className={cn(
                 "flex items-center justify-center text-[11px] font-bold px-2 py-0.5 rounded-full min-w-[24px]",
-                isActive ? "bg-yellow-500/30 text-zinc-900" : "bg-zinc-200 dark:bg-zinc-800 text-zinc-500"
+                isActive 
+                  // Latar angka pada tombol aktif disesuaikan
+                  ? "bg-zinc-800 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-900" 
+                  : "bg-zinc-200 dark:bg-zinc-800 text-zinc-500"
               )}>
                 {count}
               </span>
@@ -92,15 +92,7 @@ export function Skills() {
         {filteredSkills.map((skill) => {
           const Icon = skill.icon
           return (
-            <div 
-              key={skill.name}
-              className={cn(
-                // Tag dibesarkan ke text-[15px] (lebih besar dari filter) dan padding px-4 py-2.5
-                "flex items-center gap-2.5 px-4 py-2.5 rounded-full border text-[15px] font-bold transition-all duration-300 hover:scale-105 cursor-default shadow-sm",
-                skill.color
-              )}
-            >
-              {/* Ikon dibesarkan ke w-4.5 h-4.5 (18px) */}
+            <div key={skill.name} className={cn("flex items-center gap-2.5 px-4 py-2.5 rounded-full border text-[15px] font-bold transition-all duration-300 hover:scale-105 cursor-default shadow-sm", skill.color)}>
               <Icon className="w-[18px] h-[18px]" />
               {skill.name}
             </div>

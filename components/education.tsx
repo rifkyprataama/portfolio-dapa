@@ -1,39 +1,22 @@
 "use client"
 import { GraduationCap } from "lucide-react"
-
-// Data dummy pendidikan (Silakan sesuaikan dengan data aslimu nanti)
-const educationData = [
-  {
-    id: 1,
-    school: "Universitas Islam Negeri Sunan Gunung Djati", // Disesuaikan dengan tebakan dari proyek tugas kuliahmu
-    degree: "Bachelor's degree",
-    major: "Informatics Engineering",
-    gpa: "3.80/4.00",
-    startDate: "2023",
-    endDate: "2027",
-    location: "Bandung, Indonesia ID"
-  },
-  {
-    id: 2,
-    school: "SMA Negeri 1 Bandung", // Placeholder
-    degree: "Senior High School",
-    major: "Science",
-    gpa: null, // Kosongkan jika tidak ingin menampilkan nilai
-    startDate: "2020",
-    endDate: "2023",
-    location: "Bandung, Indonesia ID"
-  }
-]
+import { useLanguageStore } from "@/store/use-language-store" // Import Store Bahasa
+import { dict } from "@/lib/dictionaries" // Import Kamus
 
 export function Education() {
+  // Mengambil bahasa yang aktif dan kamusnya
+  const { language } = useLanguageStore()
+  const d = dict[language]
+
   return (
     <div className="flex flex-col gap-4">
-      {educationData.map((edu) => (
+      {/* SEKARANG MENGGUNAKAN d.educationData DARI KAMUS */}
+      {d.educationData.map((edu) => (
         <div 
           key={edu.id} 
           className="flex gap-4 border border-zinc-200 dark:border-zinc-800/50 bg-zinc-50 dark:bg-zinc-900/30 rounded-2xl p-5 transition-colors duration-300"
         >
-          {/* Logo Sekolah/Kampus (Placeholder) */}
+          {/* Logo Sekolah/Kampus */}
           <div className="flex items-center justify-center w-12 h-12 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shrink-0 shadow-sm">
              <GraduationCap className="w-6 h-6 text-zinc-400" />
           </div>
