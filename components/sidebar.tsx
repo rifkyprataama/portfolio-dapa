@@ -10,7 +10,7 @@ import {
 
 const navLinks = [
   { href: "/", label: "Home", icon: HomeIcon },
-  { href: "#", label: "About", icon: User },
+  { href: "/about", label: "About", icon: User },
   { href: "#", label: "Achievements", icon: Trophy },
   { href: "#", label: "Projects", icon: Briefcase },
   { href: "#", label: "Dashboard", icon: LayoutDashboard },
