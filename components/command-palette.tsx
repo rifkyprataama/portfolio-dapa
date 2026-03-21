@@ -125,7 +125,7 @@ function CommandItem({ label, icon: Icon, onSelect }: { label: string; icon: Rea
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "#", label: "About", icon: User },
+  { href: "/about", label: "About", icon: User },
   { href: "#", label: "Achievements", icon: Trophy },
   { href: "#", label: "Projects", icon: Briefcase },
   { href: "#", label: "Dashboard", icon: LayoutDashboard },
