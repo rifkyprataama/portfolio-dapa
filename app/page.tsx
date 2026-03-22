@@ -5,15 +5,15 @@ import { MapPin } from "lucide-react"
 import { useLayoutStore } from "@/store/use-layout-store"
 import { useLanguageStore } from "@/store/use-language-store" // Import store bahasa
 import { dict } from "@/lib/dictionaries" // Import kamus
-import { Topbar } from "@/components/topbar" 
-import { Sidebar } from "@/components/sidebar"
-import { Skills } from "@/components/skills"
+import { Topbar } from "@/components/layout/topbar"
+import { Sidebar } from "@/components/layout/sidebar"
+import { Skills } from "@/components/sections/skills"
 
 export default function Home() {
   const { layout } = useLayoutStore()
   const { language } = useLanguageStore() // Mengambil bahasa saat ini (US/ID)
   const d = dict[language] // Memilih kamus sesuai bahasa
-  
+
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
                 {d.greeting}
               </h1>
-              
+
               <div className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 text-sm font-medium mt-1 mb-2">
                 <MapPin className="w-4 h-4" />
                 <span>{d.basedIn} <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 ml-0.5">ID</span></span>
@@ -46,12 +46,12 @@ export default function Home() {
             </div>
 
             <div className="border-t border-zinc-200 dark:border-zinc-800/50 pt-10 mt-2 flex flex-col gap-2">
-               <div className="flex items-center gap-2">
-                 <span className="text-xl font-bold text-zinc-800 dark:text-zinc-100">{'</>'} {d.skillsTitle}</span>
-               </div>
-               <p className="text-zinc-500 dark:text-zinc-400 text-base mb-2">{d.skillsSubtitle}</p>
-               
-               <Skills />
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-bold text-zinc-800 dark:text-zinc-100">{'</>'} {d.skillsTitle}</span>
+              </div>
+              <p className="text-zinc-500 dark:text-zinc-400 text-base mb-2">{d.skillsSubtitle}</p>
+
+              <Skills />
             </div>
           </section>
         </main>
