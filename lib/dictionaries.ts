@@ -41,6 +41,10 @@ export const dict = {
     learnings: "WHAT I LEARNED",
     impacts: "IMPACT",
 
+    // Achievements UI Texts
+    achievementsTitle: "Achievements",
+    achievementsSubtitle: "Milestones and awards I've earned.",
+
     // Career Data (US)
     careerJobs: [
       {
@@ -93,7 +97,7 @@ export const dict = {
       }
     ],
 
-    // Education Data (US) - BARU DITAMBAHKAN
+    // Education Data (US)
     educationData: [
       {
         id: 1,
@@ -107,13 +111,33 @@ export const dict = {
       },
       {
         id: 2,
-        school: "SMA Negeri 1 Bandung", // Placeholder
+        school: "SMA Negeri 1 Bandung",
         degree: "Senior High School",
         major: "Science",
         gpa: null,
         startDate: "2020",
         endDate: "2023",
         location: "Bandung, Indonesia ID"
+      }
+    ],
+
+    // Achievements Data (US) - BARU
+    achievementsData: [
+      {
+        id: 1,
+        title: "1st Winner National Web Development Competition",
+        issuer: "TechFest Indonesia 2025",
+        date: "Nov 2025",
+        description: "Developed a full-stack educational platform that won first place among 50+ university teams across the nation.",
+        icon: "trophy"
+      },
+      {
+        id: 2,
+        title: "Google Certified Mobile Web Specialist",
+        issuer: "Google Developers",
+        date: "Aug 2025",
+        description: "Achieved certification for demonstrating expertise in building accessible, responsive, and highly optimized web applications.",
+        icon: "award"
       }
     ]
   },
@@ -158,6 +182,10 @@ export const dict = {
     tasks: "TUGAS",
     learnings: "APA YANG SAYA PELAJARI",
     impacts: "DAMPAK",
+
+    // Achievements UI Texts
+    achievementsTitle: "Pencapaian",
+    achievementsSubtitle: "Tonggak sejarah dan penghargaan yang saya raih.",
 
     // Career Data (ID)
     careerJobs: [
@@ -211,7 +239,7 @@ export const dict = {
       }
     ],
 
-    // Education Data (ID) - BARU DITAMBAHKAN (Diterjemahkan)
+    // Education Data (ID)
     educationData: [
       {
         id: 1,
@@ -225,13 +253,33 @@ export const dict = {
       },
       {
         id: 2,
-        school: "SMA Negeri 1 Bandung", // Placeholder
+        school: "SMA Negeri 1 Bandung", 
         degree: "Sekolah Menengah Atas",
         major: "Ilmu Pengetahuan Alam (IPA)",
         gpa: null,
         startDate: "2020",
         endDate: "2023",
         location: "Bandung, Indonesia ID"
+      }
+    ],
+
+    // Achievements Data (ID) - BARU
+    achievementsData: [
+      {
+        id: 1,
+        title: "Juara 1 Kompetisi Pengembangan Web Nasional",
+        issuer: "TechFest Indonesia 2025",
+        date: "Nov 2025",
+        description: "Mengembangkan platform pendidikan full-stack yang memenangkan juara pertama dari 50+ tim universitas di seluruh negeri.",
+        icon: "trophy"
+      },
+      {
+        id: 2,
+        title: "Spesialis Web Seluler Tersertifikasi Google",
+        issuer: "Google Developers",
+        date: "Ags 2025",
+        description: "Meraih sertifikasi keahlian dalam membangun aplikasi web yang dapat diakses, responsif, dan sangat optimal.",
+        icon: "award"
       }
     ]
   }

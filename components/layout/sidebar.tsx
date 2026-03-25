@@ -21,7 +21,7 @@ export function Sidebar() {
   const navLinks = [
     { href: "/", label: d.navHome, icon: HomeIcon },
     { href: "/about", label: d.navAbout, icon: User },
-    { href: "#", label: d.navAchievements, icon: Trophy },
+    { href: "/achievements", label: d.navAchievements, icon: Trophy },
     { href: "#", label: d.navProjects, icon: Briefcase },
     { href: "#", label: d.navDashboard, icon: LayoutDashboard },
     { href: "/guestbook", label: d.navGuestbook, icon: MessageSquare },
