@@ -22,7 +22,7 @@ export function Sidebar() {
     { href: "/", label: d.navHome, icon: HomeIcon },
     { href: "/about", label: d.navAbout, icon: User },
     { href: "/achievements", label: d.navAchievements, icon: Trophy },
-    { href: "#", label: d.navProjects, icon: Briefcase },
+    { href: "/projects", label: d.navProjects, icon: Briefcase },
     { href: "#", label: d.navDashboard, icon: LayoutDashboard },
     { href: "/guestbook", label: d.navGuestbook, icon: MessageSquare },
     { href: "#", label: d.navUses, icon: Laptop },
