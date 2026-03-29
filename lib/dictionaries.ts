@@ -41,103 +41,76 @@ export const dict = {
     learnings: "WHAT I LEARNED",
     impacts: "IMPACT",
 
-    // Achievements UI Texts
+    // Achievements UI Texts (BARU DITAMBAHKAN UNTUK FILTER & MODAL)
     achievementsTitle: "Achievements",
-    achievementsSubtitle: "Milestones and awards I've earned.",
+    achievementsSubtitle: "A curated collection of certificates and badges I've earned.",
+    searchPlaceholder: "Search...",
+    filterType: "Filter by Type",
+    filterCategory: "Filter by Category",
+    totalStr: "Total:",
+    issuedOn: "ISSUED ON",
+    lblCredentialId: "CREDENTIAL ID",
+    lblType: "TYPE",
+    lblCategory: "CATEGORY",
+    lblIssueDate: "ISSUE DATE",
+    btnCredentialUrl: "Credential URL",
 
     // Career Data (US)
     careerJobs: [
       {
-        id: 1,
-        role: "Frontend Engineer Intern",
-        company: "PT Tricada Intronik",
-        location: "Bandung, Indonesia ID",
-        startDate: "Jan 2026",
-        endDate: "Present",
-        duration: "1 Month",
-        type: "Internship",
-        mode: "Onsite",
-        tasks: [
-          "Developed and maintained responsive web interfaces using modern frontend frameworks.",
-          "Optimized website performance through code splitting and asset management.",
-          "Collaborated with backend teams to ensure seamless API integrations."
-        ],
-        learnings: [
-          "Deepened knowledge in advanced Next.js features and TypeScript architecture.",
-          "Gained hands-on experience in implementing accessibility standards (WCAG).",
-          "Learned to effectively manage complex state within large-scale applications."
-        ],
-        impacts: [
-          "Contributed to reducing homepage load time by 15%."
-        ]
+        id: 1, role: "Frontend Engineer Intern", company: "PT Tricada Intronik", location: "Bandung, Indonesia ID", startDate: "Jan 2026", endDate: "Present", duration: "1 Month", type: "Internship", mode: "Onsite",
+        tasks: ["Developed and maintained responsive web interfaces using modern frontend frameworks.", "Optimized website performance through code splitting and asset management.", "Collaborated with backend teams to ensure seamless API integrations."],
+        learnings: ["Deepened knowledge in advanced Next.js features and TypeScript architecture.", "Gained hands-on experience in implementing accessibility standards (WCAG).", "Learned to effectively manage complex state within large-scale applications."],
+        impacts: ["Contributed to reducing homepage load time by 15%."]
       },
       {
-        id: 2,
-        role: "Fullstack Developer (Freelance)",
-        company: "TemuSini - Campus App",
-        location: "Bandung, Indonesia ID",
-        startDate: "Oct 2025",
-        endDate: "Dec 2025",
-        duration: "3 Months",
-        type: "Freelance",
-        mode: "Remote",
-        tasks: [
-          "Architected and developed a Lost & Found application for a campus environment.",
-          "Built robust backend services and implemented database schemas.",
-          "Integrated real-time notification systems to enhance user engagement."
-        ],
-        learnings: [
-          "Mastered the complexities of full-stack development cycles, from concept to deployment.",
-          "Improved understanding of database optimization and efficient data handling."
-        ],
-        impacts: [
-          "Delivered a complete, functional application within the specified timeline.",
-          "Provided a valuable tool that streamlined the lost item recovery process for students."
-        ]
+        id: 2, role: "Fullstack Developer (Freelance)", company: "TemuSini - Campus App", location: "Bandung, Indonesia ID", startDate: "Oct 2025", endDate: "Dec 2025", duration: "3 Months", type: "Freelance", mode: "Remote",
+        tasks: ["Architected and developed a Lost & Found application for a campus environment.", "Built robust backend services and implemented database schemas.", "Integrated real-time notification systems to enhance user engagement."],
+        learnings: ["Mastered the complexities of full-stack development cycles, from concept to deployment.", "Improved understanding of database optimization and efficient data handling."],
+        impacts: ["Delivered a complete, functional application within the specified timeline.", "Provided a valuable tool that streamlined the lost item recovery process for students."]
       }
     ],
 
     // Education Data (US)
     educationData: [
-      {
-        id: 1,
-        school: "Universitas Islam Negeri Sunan Gunung Djati",
-        degree: "Bachelor's degree",
-        major: "Informatics Engineering",
-        gpa: "3.80/4.00",
-        startDate: "2023",
-        endDate: "2027",
-        location: "Bandung, Indonesia ID"
-      },
-      {
-        id: 2,
-        school: "SMA Negeri 1 Bandung",
-        degree: "Senior High School",
-        major: "Science",
-        gpa: null,
-        startDate: "2020",
-        endDate: "2023",
-        location: "Bandung, Indonesia ID"
-      }
+      { id: 1, school: "Universitas Islam Negeri Sunan Gunung Djati", degree: "Bachelor's degree", major: "Informatics Engineering", gpa: "3.80/4.00", startDate: "2023", endDate: "2027", location: "Bandung, Indonesia ID" },
+      { id: 2, school: "SMA Negeri 1 Bandung", degree: "Senior High School", major: "Science", gpa: null, startDate: "2020", endDate: "2023", location: "Bandung, Indonesia ID" }
     ],
 
-    // Achievements Data (US) - BARU
+    // Achievements Data (US) - STRUKTUR DIPERBARUI
     achievementsData: [
       {
-        id: 1,
-        title: "1st Winner National Web Development Competition",
-        issuer: "TechFest Indonesia 2025",
-        date: "Nov 2025",
-        description: "Developed a full-stack educational platform that won first place among 50+ university teams across the nation.",
-        icon: "trophy"
+        id: "ACH-001",
+        title: "Belajar Membuat Aplikasi Android dengan Jetpack Compose",
+        issuer: "Dicoding Indonesia",
+        date: "January 2025",
+        type: "Course",
+        category: "Mobile",
+        credentialId: "81P2LGL38ZOY",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1523289333742-be1143f6b766?q=80&w=600&auto=format&fit=crop" // Placeholder image
       },
       {
-        id: 2,
-        title: "Google Certified Mobile Web Specialist",
-        issuer: "Google Developers",
-        date: "Aug 2025",
-        description: "Achieved certification for demonstrating expertise in building accessible, responsive, and highly optimized web applications.",
-        icon: "award"
+        id: "ACH-002",
+        title: "Backend Developer Internship",
+        issuer: "PT Affan Technology Indonesia",
+        date: "July 2025",
+        type: "Professional",
+        category: "Backend",
+        credentialId: "196/EKS/HCLGA/ATI/2025",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" // Placeholder image
+      },
+      {
+        id: "ACH-003",
+        title: "E-book Petunjuk Pro: Freelance Web Developer",
+        issuer: "Build With Angga",
+        date: "September 2025",
+        type: "Course",
+        category: "Freelance",
+        credentialId: "BWA-99281-2025",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" // Placeholder image
       }
     ]
   },
@@ -183,103 +156,76 @@ export const dict = {
     learnings: "APA YANG SAYA PELAJARI",
     impacts: "DAMPAK",
 
-    // Achievements UI Texts
+    // Achievements UI Texts (BARU DITAMBAHKAN UNTUK FILTER & MODAL)
     achievementsTitle: "Pencapaian",
-    achievementsSubtitle: "Tonggak sejarah dan penghargaan yang saya raih.",
+    achievementsSubtitle: "Koleksi sertifikat dan lencana pilihan yang saya peroleh.",
+    searchPlaceholder: "Cari...",
+    filterType: "Filter Tipe",
+    filterCategory: "Filter Kategori",
+    totalStr: "Total:",
+    issuedOn: "DITERBITKAN PADA",
+    lblCredentialId: "ID KREDENSIAL",
+    lblType: "TIPE",
+    lblCategory: "KATEGORI",
+    lblIssueDate: "TANGGAL TERBIT",
+    btnCredentialUrl: "URL Kredensial",
 
     // Career Data (ID)
     careerJobs: [
       {
-        id: 1,
-        role: "Frontend Engineer Intern",
-        company: "PT Tricada Intronik",
-        location: "Bandung, Indonesia ID",
-        startDate: "Jan 2026",
-        endDate: "Sekarang", 
-        duration: "1 Bulan", 
-        type: "Magang", 
-        mode: "Di Tempat", 
-        tasks: [
-          "Mengembangkan dan memelihara antarmuka web responsif menggunakan framework frontend modern.",
-          "Mengoptimalkan performa situs web melalui pemisahan kode dan manajemen aset.",
-          "Berkolaborasi dengan tim backend untuk memastikan integrasi API yang mulus."
-        ],
-        learnings: [
-          "Memperdalam pengetahuan tentang fitur Next.js lanjutan dan arsitektur TypeScript.",
-          "Mendapatkan pengalaman langsung dalam menerapkan standar aksesibilitas (WCAG).",
-          "Belajar mengelola state yang kompleks secara efektif dalam aplikasi berskala besar."
-        ],
-        impacts: [
-          "Berkontribusi dalam mengurangi waktu muat halaman beranda sebesar 15%."
-        ]
+        id: 1, role: "Frontend Engineer Intern", company: "PT Tricada Intronik", location: "Bandung, Indonesia ID", startDate: "Jan 2026", endDate: "Sekarang", duration: "1 Bulan", type: "Magang", mode: "Di Tempat",
+        tasks: ["Mengembangkan dan memelihara antarmuka web responsif menggunakan framework frontend modern.", "Mengoptimalkan performa situs web melalui pemisahan kode dan manajemen aset.", "Berkolaborasi dengan tim backend untuk memastikan integrasi API yang mulus."],
+        learnings: ["Memperdalam pengetahuan tentang fitur Next.js lanjutan dan arsitektur TypeScript.", "Mendapatkan pengalaman langsung dalam menerapkan standar aksesibilitas (WCAG).", "Belajar mengelola state yang kompleks secara efektif dalam aplikasi berskala besar."],
+        impacts: ["Berkontribusi dalam mengurangi waktu muat halaman beranda sebesar 15%."]
       },
       {
-        id: 2,
-        role: "Fullstack Developer (Pekerja Lepas)", 
-        company: "TemuSini - Aplikasi Kampus", 
-        location: "Bandung, Indonesia ID",
-        startDate: "Okt 2025",
-        endDate: "Des 2025",
-        duration: "3 Bulan", 
-        type: "Pekerja Lepas", 
-        mode: "Jarak Jauh", 
-        tasks: [
-          "Merancang dan mengembangkan aplikasi Barang Hilang & Ditemukan untuk lingkungan kampus.",
-          "Membangun layanan backend yang tangguh dan mengimplementasikan skema database.",
-          "Mengintegrasikan sistem notifikasi real-time untuk meningkatkan interaksi pengguna."
-        ],
-        learnings: [
-          "Menguasai kompleksitas siklus pengembangan full-stack, mulai dari konsep hingga penerapan.",
-          "Meningkatkan pemahaman tentang optimasi database dan penanganan data yang efisien."
-        ],
-        impacts: [
-          "Memberikan aplikasi fungsional yang lengkap sesuai dengan tenggat waktu yang ditentukan.",
-          "Menyediakan alat berharga yang menyederhanakan proses penemuan barang hilang bagi mahasiswa."
-        ]
+        id: 2, role: "Fullstack Developer (Pekerja Lepas)", company: "TemuSini - Aplikasi Kampus", location: "Bandung, Indonesia ID", startDate: "Okt 2025", endDate: "Des 2025", duration: "3 Bulan", type: "Pekerja Lepas", mode: "Jarak Jauh",
+        tasks: ["Merancang dan mengembangkan aplikasi Barang Hilang & Ditemukan untuk lingkungan kampus.", "Membangun layanan backend yang tangguh dan mengimplementasikan skema database.", "Mengintegrasikan sistem notifikasi real-time untuk meningkatkan interaksi pengguna."],
+        learnings: ["Menguasai kompleksitas siklus pengembangan full-stack, mulai dari konsep hingga penerapan.", "Meningkatkan pemahaman tentang optimasi database dan penanganan data yang efisien."],
+        impacts: ["Memberikan aplikasi fungsional yang lengkap sesuai dengan tenggat waktu yang ditentukan.", "Menyediakan alat berharga yang menyederhanakan proses penemuan barang hilang bagi mahasiswa."]
       }
     ],
 
     // Education Data (ID)
     educationData: [
-      {
-        id: 1,
-        school: "Universitas Islam Negeri Sunan Gunung Djati",
-        degree: "Gelar Sarjana",
-        major: "Teknik Informatika",
-        gpa: "3.80/4.00",
-        startDate: "2023",
-        endDate: "2027",
-        location: "Bandung, Indonesia ID"
-      },
-      {
-        id: 2,
-        school: "SMA Negeri 1 Bandung", 
-        degree: "Sekolah Menengah Atas",
-        major: "Ilmu Pengetahuan Alam (IPA)",
-        gpa: null,
-        startDate: "2020",
-        endDate: "2023",
-        location: "Bandung, Indonesia ID"
-      }
+      { id: 1, school: "Universitas Islam Negeri Sunan Gunung Djati", degree: "Gelar Sarjana", major: "Teknik Informatika", gpa: "3.80/4.00", startDate: "2023", endDate: "2027", location: "Bandung, Indonesia ID" },
+      { id: 2, school: "SMA Negeri 1 Bandung", degree: "Sekolah Menengah Atas", major: "Ilmu Pengetahuan Alam (IPA)", gpa: null, startDate: "2020", endDate: "2023", location: "Bandung, Indonesia ID" }
     ],
 
-    // Achievements Data (ID) - BARU
+    // Achievements Data (ID) - STRUKTUR DIPERBARUI
     achievementsData: [
       {
-        id: 1,
-        title: "Juara 1 Kompetisi Pengembangan Web Nasional",
-        issuer: "TechFest Indonesia 2025",
-        date: "Nov 2025",
-        description: "Mengembangkan platform pendidikan full-stack yang memenangkan juara pertama dari 50+ tim universitas di seluruh negeri.",
-        icon: "trophy"
+        id: "ACH-001",
+        title: "Belajar Membuat Aplikasi Android dengan Jetpack Compose",
+        issuer: "Dicoding Indonesia",
+        date: "Januari 2025",
+        type: "Kursus",
+        category: "Mobile",
+        credentialId: "81P2LGL38ZOY",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1523289333742-be1143f6b766?q=80&w=600&auto=format&fit=crop" // Placeholder image
       },
       {
-        id: 2,
-        title: "Spesialis Web Seluler Tersertifikasi Google",
-        issuer: "Google Developers",
-        date: "Ags 2025",
-        description: "Meraih sertifikasi keahlian dalam membangun aplikasi web yang dapat diakses, responsif, dan sangat optimal.",
-        icon: "award"
+        id: "ACH-002",
+        title: "Magang Backend Developer",
+        issuer: "PT Affan Technology Indonesia",
+        date: "Juli 2025",
+        type: "Profesional",
+        category: "Backend",
+        credentialId: "196/EKS/HCLGA/ATI/2025",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" // Placeholder image
+      },
+      {
+        id: "ACH-003",
+        title: "E-book Petunjuk Pro: Freelance Web Developer",
+        issuer: "Build With Angga",
+        date: "September 2025",
+        type: "Kursus",
+        category: "Freelance",
+        credentialId: "BWA-99281-2025",
+        credentialUrl: "#",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" // Placeholder image
       }
     ]
   }
