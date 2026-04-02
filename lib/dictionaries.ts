@@ -51,6 +51,13 @@ export const dict = {
     monkeytypeTitle: "Monkeytype Stats",
     monkeytypeSubtitle: "Typing statistics and performance.",
     lblTestsStarted: "Tests Started", lblTestsCompleted: "Tests Completed", lblTotalTime: "Total Typing Time", lblBio: "bio", lblKeyboard: "keyboard",
+
+    // Guestbook UI Texts
+    guestbookTitle: "Guestbook", 
+    guestbookSubtitle: "Leave a message, share feedback, or just say hello!",
+    lblLoginToPost: "Login with GitHub to leave a message",
+    lblMessagePlaceholder: "Message #guestbook...",
+    btnSend: "Send",
   },
   ID: {
     // Menu & Sidebar
@@ -104,5 +111,12 @@ export const dict = {
     monkeytypeTitle: "Statistik Monkeytype",
     monkeytypeSubtitle: "Statistik dan performa mengetik.",
     lblTestsStarted: "Tes Dimulai", lblTestsCompleted: "Tes Selesai", lblTotalTime: "Total Waktu Mengetik", lblBio: "bio", lblKeyboard: "keyboard",
+
+    // Guestbook UI Texts
+    guestbookTitle: "Buku Tamu", 
+    guestbookSubtitle: "Tinggalkan pesan, bagikan umpan balik, atau sekadar menyapa!",
+    lblLoginToPost: "Masuk dengan GitHub untuk meninggalkan pesan",
+    lblMessagePlaceholder: "Pesan #buku-tamu...",
+    btnSend: "Kirim",
   }
 }
