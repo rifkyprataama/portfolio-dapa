@@ -25,7 +25,7 @@ export const dict = {
     // Projects
     projectsTitle: "Projects", projectsSubtitle: "A showcase of both private and open-source projects I've built or contributed to.", lblOverview: "Overview", lblTechStack: "Tech Stack", lblFeatures: "Key Features", lblRole: "My Role", lblChallenges: "Challenges & Solutions", btnViewDetail: "View Detail", btnVisitRepo: "Visit Repository", btnLiveDemo: "Live Demo", btnBack: "Back",
 
-    // Dashboard UI Texts (BARU DITAMBAHKAN)
+    // Dashboard UI Texts
     dashboardTitle: "Dashboard",
     dashboardSubtitle: "My personal dashboard, visualizing development statistics and activities.",
     
@@ -58,6 +58,58 @@ export const dict = {
     lblLoginToPost: "Login with GitHub to leave a message",
     lblMessagePlaceholder: "Message #guestbook...",
     btnSend: "Send",
+
+    // Uses UI Texts
+    usesTitle: "Uses",
+    usesSubtitle: "A curated list of the tech I use to build software, stay productive, and manage my workflow.",
+    catHardware: "Hardware & Workspace",
+    catCoding: "Coding & Development",
+    catProductivity: "Design & Productivity",
+    usesHardwareData: [
+      { name: "MacBook Pro 14\"", desc: "My primary workhorse. The M-series chip provides incredible performance and battery life for development." },
+      { name: "Rexus Mono Series 75%", desc: "A compact mechanical keyboard perfect for long coding sessions and saving desk space." },
+      { name: "Logitech MX Master 3S", desc: "The most ergonomic and productive mouse I've ever used, essential for navigating complex architectures." },
+      { name: "LG 27\" 4K Monitor", desc: "Provides crisp text and accurate colors, reducing eye strain during long hours of programming and UI design." }
+    ],
+    usesCodingData: [
+      { name: "Visual Studio Code", desc: "My primary editor. I use a custom dark theme with 'JetBrains Mono' for clean, readable code." },
+      { name: "Cursor IDE", desc: "An AI-powered fork of VS Code that significantly speeds up my prototyping and debugging workflow." },
+      { name: "Warp Terminal", desc: "A blazingly fast, Rust-based terminal that makes navigating the CLI a seamless experience." },
+      { name: "Docker", desc: "Essential for containerizing applications and ensuring environments remain consistent across development and production." }
+    ],
+    usesProductivityData: [
+      { name: "Figma", desc: "My go-to tool for designing UI/UX, wireframing, and creating design systems before writing any code." },
+      { name: "Notion", desc: "My second brain. Used extensively for task management, documentation, and project roadmaps." },
+      { name: "Postman", desc: "An absolute necessity for testing, documenting, and interacting with REST APIs during backend development." },
+      { name: "Obsidian", desc: "For local, markdown-based knowledge management and taking quick technical notes." }
+    ],
+
+    // Contact UI Texts
+    contactTitle: "Contact", contactSubtitle: "Let's get in touch.",
+    findMe: "Find me on social media", orSend: "Or send me a message",
+    lblName: "Name", lblEmail: "Email", lblMessage: "Message", btnSendEmail: "Send Email",
+    // Social Cards
+    stayInTouch: "Stay in Touch", stayInTouchDesc: "Reach out via email for inquiries or collaborations.", btnGmail: "Go to Gmail",
+    followJourney: "Follow My Journey", followJourneyDesc: "Follow my creative journey.", btnInstagram: "Go to Instagram",
+    letsConnect: "Let's Connect", letsConnectDesc: "Connect with me professionally.", btnLinkedIn: "Go to LinkedIn",
+    joinFun: "Join the Fun", joinFunDesc: "Watch engaging and fun content.", btnTiktok: "Go to Tiktok",
+    exploreCode: "Explore the Code", exploreCodeDesc: "Explore my open-source work.", btnGithub: "Go to Github",
+
+    // Links UI Texts
+    linksTitle: "Links", linksSubtitle: "All my digital footprints in one place.",
+    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia", // <-- DIUBAH MENJADI lblProfileRole
+    
+    // Tautan dengan Deskripsinya
+    btnPersonalWebsite: "Portfolio", descPersonalWebsite: "Personal website & portfolio",
+    btnReadCV: "Resume CV", descResume: "Full Resume & CV",
+    btnGithubProfile: "GitHub", descGithub: "Explore my open-source code",
+    btnLinkedInProfile: "LinkedIn", descLinkedin: "Professional connections",
+    btnSaweria: "Donasi Tiptap", descSaweria: "Support my work via custom donation",
+    
+    // Kartu Get in Touch
+    getInTouch: "Get in Touch",
+    getInTouchDesc: "Feel free to reach out for collaborations or just a friendly chat",
+    btnLinksSendEmail: "Send Email", // <-- DIUBAH MENJADI btnLinksSendEmail
   },
   ID: {
     // Menu & Sidebar
@@ -85,7 +137,7 @@ export const dict = {
     // Projects
     projectsTitle: "Proyek", projectsSubtitle: "Etalase proyek pribadi dan sumber terbuka yang saya buat atau kontribusikan.", lblOverview: "Gambaran Umum", lblTechStack: "Tumpukan Teknologi", lblFeatures: "Fitur Utama", lblRole: "Peran Saya", lblChallenges: "Tantangan & Solusi", btnViewDetail: "Lihat Detail", btnVisitRepo: "Kunjungi Repositori", btnLiveDemo: "Demo Langsung", btnBack: "Kembali",
 
-    // Dashboard UI Texts (BARU DITAMBAHKAN - DITERJEMAHKAN)
+    // Dashboard UI Texts
     dashboardTitle: "Dasbor",
     dashboardSubtitle: "Dasbor pribadi saya, memvisualisasikan statistik dan aktivitas pengembangan.",
     
@@ -118,5 +170,57 @@ export const dict = {
     lblLoginToPost: "Masuk dengan GitHub untuk meninggalkan pesan",
     lblMessagePlaceholder: "Pesan #buku-tamu...",
     btnSend: "Kirim",
+
+    // Uses UI Texts
+    usesTitle: "Penggunaan",
+    usesSubtitle: "Daftar kurasi teknologi yang saya gunakan untuk membangun perangkat lunak, tetap produktif, dan mengelola alur kerja saya.",
+    catHardware: "Perangkat Keras & Ruang Kerja",
+    catCoding: "Pengkodean & Pengembangan",
+    catProductivity: "Desain & Productivity",
+    usesHardwareData: [
+      { name: "MacBook Pro 14\"", desc: "Mesin utama saya. Chip M-series memberikan performa dan daya tahan baterai luar biasa untuk pengembangan." },
+      { name: "Rexus Mono Series 75%", desc: "Keyboard mekanik ringkas yang sempurna untuk sesi ngoding panjang dan menghemat ruang meja." },
+      { name: "Logitech MX Master 3S", desc: "Mouse paling ergonomis dan produktif yang pernah saya gunakan, penting untuk menavigasi arsitektur kompleks." },
+      { name: "Monitor LG 27\" 4K", desc: "Menyajikan teks tajam dan warna akurat, mengurangi ketegangan mata selama pemrograman dan desain UI." }
+    ],
+    usesCodingData: [
+      { name: "Visual Studio Code", desc: "Editor utama saya. Saya menggunakan tema gelap kustom dengan font 'JetBrains Mono' agar kode mudah dibaca." },
+      { name: "Cursor IDE", desc: "Cabang VS Code bertenaga AI yang secara signifikan mempercepat alur kerja pembuatan prototipe dan debugging saya." },
+      { name: "Warp Terminal", desc: "Terminal super cepat berbasis Rust yang membuat navigasi CLI menjadi pengalaman yang mulus." },
+      { name: "Docker", desc: "Penting untuk mengemas aplikasi dan memastikan lingkungan yang konsisten antara pengembangan dan produksi." }
+    ],
+    usesProductivityData: [
+      { name: "Figma", desc: "Alat andalan saya untuk merancang UI/UX, wireframing, dan membuat sistem desain sebelum menulis kode apa pun." },
+      { name: "Notion", desc: "Otak kedua saya. Digunakan secara ekstensif untuk manajemen tugas, dokumentasi, dan peta jalan proyek." },
+      { name: "Postman", desc: "Kebutuhan mutlak untuk menguji, mendokumentasikan, dan berinteraksi dengan REST API selama pengembangan backend." },
+      { name: "Obsidian", desc: "Untuk manajemen pengetahuan berbasis markdown lokal dan mencatat catatan teknis dengan cepat." }
+    ],
+
+    // Contact UI Texts
+    contactTitle: "Kontak", contactSubtitle: "Mari tetap terhubung.",
+    findMe: "Temukan saya di media sosial", orSend: "Atau kirimkan saya pesan",
+    lblName: "Nama", lblEmail: "Email", lblMessage: "Pesan", btnSendEmail: "Kirim Email",
+    // Social Cards
+    stayInTouch: "Tetap Terhubung", stayInTouchDesc: "Hubungi via email untuk pertanyaan atau kolaborasi.", btnGmail: "Buka Gmail",
+    followJourney: "Ikuti Perjalanan Saya", followJourneyDesc: "Ikuti perjalanan kreatif saya.", btnInstagram: "Buka Instagram",
+    letsConnect: "Mari Terhubung", letsConnectDesc: "Terhubung dengan saya secara profesional.", btnLinkedIn: "Buka LinkedIn",
+    joinFun: "Ikuti Keseruannya", joinFunDesc: "Tonton konten yang menarik dan menyenangkan.", btnTiktok: "Buka Tiktok",
+    exploreCode: "Eksplorasi Kode", exploreCodeDesc: "Jelajahi karya sumber terbuka saya.", btnGithub: "Buka Github",
+
+    // Links UI Texts
+    linksTitle: "Tautan", linksSubtitle: "Semua jejak digital saya di satu tempat.",
+    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia", // <-- DIUBAH MENJADI lblProfileRole
+    
+    // Tautan dengan Deskripsinya
+    btnPersonalWebsite: "Portofolio", descPersonalWebsite: "Situs web pribadi & portofolio",
+    btnReadCV: "Resume CV", descResume: "Resume & CV Lengkap",
+    btnGithubProfile: "GitHub", descGithub: "Eksplorasi kode sumber terbuka",
+    btnLinkedInProfile: "LinkedIn", descLinkedin: "Koneksi profesional",
+    btnSaweria: "Donasi Tiptap", descSaweria: "Dukung karya saya melalui donasi",
+    
+    // Kartu Get in Touch
+    getInTouch: "Hubungi Saya",
+    getInTouchDesc: "Jangan ragu untuk menghubungi saya untuk kolaborasi atau sekadar menyapa",
+    btnLinksSendEmail: "Kirim Email", // <-- DIUBAH MENJADI btnLinksSendEmail
   }
 }

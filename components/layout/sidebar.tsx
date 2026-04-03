@@ -25,9 +25,9 @@ export function Sidebar() {
     { href: "/projects", label: d.navProjects, icon: Briefcase },
     { href: "/dashboard", label: d.navDashboard, icon: LayoutDashboard },
     { href: "/guestbook", label: d.navGuestbook, icon: MessageSquare },
-    { href: "#", label: d.navUses, icon: Laptop },
-    { href: "#", label: d.navContact, icon: Mail },
-    { href: "#", label: d.navLinks, icon: Link2 },
+    { href: "/uses", label: d.navUses, icon: Laptop },
+    { href: "/contact", label: d.navContact, icon: Mail },
+    { href: "/links", label: d.navLinks, icon: Link2 },
   ]
 
   return (
