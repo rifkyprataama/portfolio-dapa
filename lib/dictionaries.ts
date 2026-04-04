@@ -1,10 +1,10 @@
 export const dict = {
   US: {
     // Menu & Sidebar
-    navHome: "Home", navAbout: "About", navAchievements: "Achievements", navProjects: "Projects", navDashboard: "Dashboard", navGuestbook: "Guestbook", navUses: "Uses", navContact: "Contact", navLinks: "Links", commandPalette: "Command Palette", copyright: "COPYRIGHT © 2026", rights: "Daffa Pratama. All rights reserved.",
+    navHome: "Home", navAbout: "About", navAchievements: "Achievements", navProjects: "Projects", navDashboard: "Dashboard", navGuestbook: "Guestbook", navUses: "Uses", navContact: "Contact", navLinks: "Links", commandPalette: "Command Palette", copyright: "COPYRIGHT © 2026", rights: "Rifky Daffa Pratama. All rights reserved.",
     
     // Home Page
-    greeting: "Hi, I'm Daffa Pratama", basedIn: "Based in Bandung, Indonesia", 
+    greeting: "Hi, I'm Rifky Daffa Pratama", basedIn: "Based in Bandung, Indonesia", 
     desc1: "A Software Engineer dedicated to building impactful digital solutions. I specialize in developing scalable web platforms and applications using a modern tech stack, primarily focusing on frontend architecture, Next.js, TypeScript, and seamless user experiences.", 
     desc2: "My approach combines technical expertise with a strong emphasis on clean, maintainable code. I thrive in crafting software that is well-structured and aligned with business goals, ensuring every project delivers logical clarity and a meaningful real-world impact.", 
     skillsTitle: "Skills", skillsSubtitle: "My professional skills.",
@@ -97,7 +97,7 @@ export const dict = {
 
     // Links UI Texts
     linksTitle: "Links", linksSubtitle: "All my digital footprints in one place.",
-    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia", // <-- DIUBAH MENJADI lblProfileRole
+    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia",
     
     // Tautan dengan Deskripsinya
     btnPersonalWebsite: "Portfolio", descPersonalWebsite: "Personal website & portfolio",
@@ -109,14 +109,24 @@ export const dict = {
     // Kartu Get in Touch
     getInTouch: "Get in Touch",
     getInTouchDesc: "Feel free to reach out for collaborations or just a friendly chat",
-    btnLinksSendEmail: "Send Email", // <-- DIUBAH MENJADI btnLinksSendEmail
+    btnLinksSendEmail: "Send Email",
+
+    // --- BARU DITAMBAHKAN: Command Palette ---
+    cmdGroupNav: "NAVIGATION",
+    cmdGroupSettings: "SETTINGS",
+    cmdThemeLight: "Switch to Light Theme",
+    cmdThemeDark: "Switch to Dark Theme",
+    cmdLayoutSidebar: "Switch to Sidebar Layout",
+    cmdLayoutTopbar: "Switch to Topbar Layout",
+    cmdLangID: "Switch Language to ID",
+    cmdLangUS: "Switch Language to US",
   },
   ID: {
     // Menu & Sidebar
-    navHome: "Beranda", navAbout: "Tentang", navAchievements: "Pencapaian", navProjects: "Proyek", navDashboard: "Dasbor", navGuestbook: "Buku Tamu", navUses: "Penggunaan", navContact: "Kontak", navLinks: "Tautan", commandPalette: "Palet Perintah", copyright: "HAK CIPTA © 2026", rights: "Daffa Pratama. Hak cipta dilindungi.",
+    navHome: "Beranda", navAbout: "Tentang", navAchievements: "Pencapaian", navProjects: "Proyek", navDashboard: "Dashboard", navGuestbook: "Buku Tamu", navUses: "Penggunaan", navContact: "Kontak", navLinks: "Tautan", commandPalette: "Palet Perintah", copyright: "HAK CIPTA © 2026", rights: "Rifky Daffa Pratama. Hak cipta dilindungi.",
     
     // Home Page
-    greeting: "Hai, Saya Daffa Pratama", basedIn: "Berbasis di Bandung, Indonesia", 
+    greeting: "Hai, Saya Rifky Daffa Pratama", basedIn: "Berbasis di Bandung, Indonesia", 
     desc1: "Seorang Software Engineer yang berdedikasi untuk membangun solusi digital yang berdampak. Saya berspesialisasi dalam mengembangkan platform web dan aplikasi yang skalabel menggunakan tumpukan teknologi modern, dengan fokus utama pada arsitektur frontend, Next.js, TypeScript, dan pengalaman pengguna yang mulus.", 
     desc2: "Pendekatan saya menggabungkan keahlian teknis dengan penekanan kuat pada kode yang bersih dan mudah dipelihara. Saya berkembang dalam merancang perangkat lunak yang terstruktur dengan baik dan selaras dengan tujuan bisnis, memastikan setiap proyek memberikan kejelasan logis dan dampak nyata yang bermakna.", 
     skillsTitle: "Keahlian", skillsSubtitle: "Keahlian profesional saya.",
@@ -209,7 +219,7 @@ export const dict = {
 
     // Links UI Texts
     linksTitle: "Tautan", linksSubtitle: "Semua jejak digital saya di satu tempat.",
-    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia", // <-- DIUBAH MENJADI lblProfileRole
+    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia",
     
     // Tautan dengan Deskripsinya
     btnPersonalWebsite: "Portofolio", descPersonalWebsite: "Situs web pribadi & portofolio",
@@ -221,6 +231,16 @@ export const dict = {
     // Kartu Get in Touch
     getInTouch: "Hubungi Saya",
     getInTouchDesc: "Jangan ragu untuk menghubungi saya untuk kolaborasi atau sekadar menyapa",
-    btnLinksSendEmail: "Kirim Email", // <-- DIUBAH MENJADI btnLinksSendEmail
+    btnLinksSendEmail: "Kirim Email",
+
+    // --- BARU DITAMBAHKAN: Command Palette ---
+    cmdGroupNav: "NAVIGASI",
+    cmdGroupSettings: "PENGATURAN",
+    cmdThemeLight: "Beralih ke Tema Terang",
+    cmdThemeDark: "Beralih ke Tema Gelap",
+    cmdLayoutSidebar: "Beralih ke Tata Letak Sidebar",
+    cmdLayoutTopbar: "Beralih ke Tata Letak Topbar",
+    cmdLangID: "Ubah Bahasa ke ID",
+    cmdLangUS: "Ubah Bahasa ke US",
   }
 }
