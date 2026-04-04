@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-// PERBAIKAN: Mengganti SiCss3 menjadi SiCss
 import { 
   SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, 
   SiBootstrap, SiNodedotjs, SiExpress, SiLaravel, SiPhp, SiPython, SiKotlin, 
@@ -13,7 +12,6 @@ import { Layers, Zap, Network } from "lucide-react"
 
 const skillsData = [
   { name: "HTML", icon: SiHtml5, categories: ["Frontend", "Main"], color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
-  // PERBAIKAN: Menggunakan SiCss di sini
   { name: "CSS", icon: SiCss, categories: ["Frontend"], color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
   { name: "JavaScript", icon: SiJavascript, categories: ["Frontend", "Main"], color: "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20" },
   { name: "TypeScript", icon: SiTypescript, categories: ["Frontend", "Backend", "Main"], color: "bg-blue-600/10 text-blue-700 dark:text-blue-500 border-blue-600/20" },
@@ -54,8 +52,13 @@ export function Skills() {
 
   return (
     <div className="flex flex-col gap-6 w-full mt-2">
-      {/* Baris Tombol Filter */}
-      <div className="flex flex-wrap items-center gap-2.5">
+      
+      {/* PERBAIKAN: 
+        1. flex-nowrap agar selalu 1 baris
+        2. overflow-x-auto agar bisa discroll horizontal jika layar sempit
+        3. no-scrollbar agar tampilan scrollbar bawaan browser disembunyikan
+      */}
+      <div className="flex flex-nowrap overflow-x-auto items-center gap-2.5 pb-2 no-scrollbar">
         {categories.map((category) => {
           const count = category === "All" ? skillsData.length : skillsData.filter(s => s.categories.includes(category)).length
           const isActive = activeCategory === category
@@ -65,9 +68,8 @@ export function Skills() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border",
+                "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border whitespace-nowrap shrink-0", // Tambahkan whitespace-nowrap dan shrink-0
                 isActive 
-                  // PERBAIKAN: Hitam pekat di Light, Putih bersih di Dark
                   ? "bg-zinc-950 dark:bg-white border-zinc-950 dark:border-white text-white dark:text-zinc-950 shadow-md" 
                   : "bg-zinc-50 dark:bg-zinc-900/50 border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
               )}
@@ -76,7 +78,6 @@ export function Skills() {
               <span className={cn(
                 "flex items-center justify-center text-[11px] font-bold px-2 py-0.5 rounded-full min-w-[24px]",
                 isActive 
-                  // Latar angka pada tombol aktif disesuaikan
                   ? "bg-zinc-800 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-900" 
                   : "bg-zinc-200 dark:bg-zinc-800 text-zinc-500"
               )}>

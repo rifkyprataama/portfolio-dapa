@@ -19,6 +19,11 @@ export default function Home() {
   useEffect(() => setMounted(true), [])
   if (!mounted) return null
 
+  // Komponen Garis Pemisah (Divider) standar untuk area konten utama
+  const Divider = () => (
+    <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800/80 my-10"></div>
+  )
+
   return (
     <div className="min-h-screen flex flex-col font-sans transition-colors duration-500">
       {layout === 'topbar' && <Topbar />}
@@ -27,7 +32,9 @@ export default function Home() {
         <main className="flex flex-col md:flex-row gap-12 lg:gap-16 mt-6">
           {layout === 'sidebar' && <Sidebar />}
 
-          <section className="flex-1 flex flex-col gap-10 mt-2">
+          <section className="flex-1 flex flex-col mt-2">
+            
+            {/* --- BAGIAN 1: HERO (Perkenalan) --- */}
             <div className="flex flex-col gap-4">
               {/* Teks diambil dari kamus */}
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -45,14 +52,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-t border-zinc-200 dark:border-zinc-800/50 pt-10 mt-2 flex flex-col gap-2">
+            {/* --- GARIS PEMISAH STANDAR --- */}
+            <Divider />
+
+            {/* --- BAGIAN 2: SKILLS --- */}
+            <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <span className="text-xl font-bold text-zinc-800 dark:text-zinc-100">{'</>'} {d.skillsTitle}</span>
               </div>
-              <p className="text-zinc-500 dark:text-zinc-400 text-base mb-2">{d.skillsSubtitle}</p>
+              <p className="text-zinc-500 dark:text-zinc-400 text-base mb-4">{d.skillsSubtitle}</p>
 
               <Skills />
             </div>
+
           </section>
         </main>
       </div>
