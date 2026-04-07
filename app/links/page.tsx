@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
-import { Globe, FileText, Github, Linkedin, Gift, Mail, ArrowUpRight, Send, MapPin, QrCode, Sun, Moon, Zap, Heart, Copy, Instagram } from "lucide-react"
+import { Globe, FileText, Github, Linkedin, Gift, Mail, ArrowUpRight, Send, MapPin, QrCode, Sun, Moon, Copy, Instagram, X } from "lucide-react"
+import { useTheme } from "next-themes" // Import standar Next.js untuk tema
 import { useLanguageStore } from "@/store/use-language-store" 
 import { dict } from "@/lib/dictionaries" 
 import { cn } from "@/lib/utils"
@@ -21,13 +22,21 @@ const ThreadsIcon = ({ className }: { className?: string }) => (
 
 export default function LinksPage() {
   const { language, setLanguage } = useLanguageStore() 
+  const { theme, setTheme } = useTheme() // Menggunakan next-themes
   const d = dict[language]
+  
   const [mounted, setMounted] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [showQR, setShowQR] = useState(false)
+  const [pageUrl, setPageUrl] = useState("")
 
-  const EMAIL_ADDRESS = "rifkydaffapratama@gmail.com"
+  const EMAIL_ADDRESS = "rifkydaffap@gmail.com"
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    setMounted(true)
+    setPageUrl(window.location.href) // Mengambil URL asli saat ini untuk QR Code
+  }, [])
+
   if (!mounted) return null
 
   const handleCopyEmail = () => {
@@ -36,14 +45,12 @@ export default function LinksPage() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  // Komponen Tombol Sosmed Bulat
   const SocialCircle = ({ icon: Icon, href }: any) => (
-    <a href={href} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700 transition-all bg-white dark:bg-zinc-950/50">
+    <a href={href} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700 transition-all bg-white dark:bg-zinc-950/50 hover:shadow-sm">
       <Icon className="w-[22px] h-[22px]" />
     </a>
   )
 
-  // Komponen Tautan Gaya Referensi (Bersih & Putih)
   const LinkCard = ({ title, desc, icon: Icon, href }: any) => (
     <a 
       href={href}
@@ -63,40 +70,70 @@ export default function LinksPage() {
   )
 
   return (
-    // Kita hapus semua div bawaan Topbar & Sidebar, fokus pada penempatan ke tengah layar
     <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-4 font-sans transition-colors duration-500 bg-[#fafafa] dark:bg-zinc-950/80">
       
+      {/* MODAL QR CODE */}
+      {showQR && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in">
+           <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl relative flex flex-col items-center shadow-2xl">
+             <button onClick={() => setShowQR(false)} className="absolute top-4 right-4 p-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-full transition-colors">
+               <X className="w-4 h-4"/>
+             </button>
+             <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Scan QR Code</h3>
+             <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6 text-center max-w-[200px]">Scan with your phone to open this portfolio link.</p>
+             <div className="p-4 bg-white rounded-2xl border border-zinc-200 shadow-sm">
+               {/* URL QR Generator Otomatis */}
+               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(pageUrl)}`} alt="QR Code" className="w-48 h-48" />
+             </div>
+           </div>
+        </div>
+      )}
+
       <main className="w-full max-w-[420px] flex flex-col">
         
         {/* TOP BAR (Toggles & Barcode) */}
         <div className="flex items-center justify-between w-full mb-8">
-          {/* Fake Theme Toggle */}
-          <div className="flex items-center bg-zinc-100 dark:bg-zinc-900 rounded-full p-1.5 gap-1 border border-zinc-200 dark:border-zinc-800">
-            <button className="p-1.5 bg-white dark:bg-zinc-800 rounded-full shadow-sm text-zinc-700 dark:text-zinc-300"><Sun className="w-4 h-4" /></button>
-            <button className="p-1.5 text-zinc-400 hover:text-zinc-600"><Moon className="w-4 h-4" /></button>
-            <button className="p-1.5 text-zinc-400 hover:text-zinc-600"><Zap className="w-4 h-4" /></button>
-            <button className="p-1.5 text-zinc-400 hover:text-zinc-600"><Moon className="w-4 h-4" /></button>
-            <button className="p-1.5 text-zinc-400 hover:text-zinc-600"><Heart className="w-4 h-4" /></button>
+          
+          {/* Theme Toggle Asli (2 Mode) */}
+          <div className="flex items-center bg-zinc-100 dark:bg-zinc-900 rounded-full p-1 border border-zinc-200 dark:border-zinc-800">
+            <button 
+              onClick={() => setTheme('light')}
+              className={cn("p-1.5 rounded-full transition-all", theme === 'light' ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm" : "text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300")}
+              title="Light Mode"
+            >
+              <Sun className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={() => setTheme('dark')}
+              className={cn("p-1.5 rounded-full transition-all", theme === 'dark' ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm" : "text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300")}
+              title="Dark Mode"
+            >
+              <Moon className="w-4 h-4" />
+            </button>
           </div>
 
-          {/* Language Toggle */}
+          {/* Language Toggle Asli */}
           <div className="flex items-center bg-zinc-100 dark:bg-zinc-900 rounded-full p-1 border border-zinc-200 dark:border-zinc-800">
             <button 
               onClick={() => setLanguage("US")}
-              className={cn("px-4 py-1.5 rounded-full text-xs font-bold transition-all", language === "US" ? "bg-yellow-400 text-black shadow-sm" : "text-zinc-400 hover:text-zinc-600")}
+              className={cn("px-4 py-1.5 rounded-full text-xs font-bold transition-all", language === "US" ? "bg-yellow-400 text-black shadow-sm" : "text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300")}
             >
               US
             </button>
             <button 
               onClick={() => setLanguage("ID")}
-              className={cn("px-4 py-1.5 rounded-full text-xs font-bold transition-all", language === "ID" ? "bg-yellow-400 text-black shadow-sm" : "text-zinc-400 hover:text-zinc-600")}
+              className={cn("px-4 py-1.5 rounded-full text-xs font-bold transition-all", language === "ID" ? "bg-yellow-400 text-black shadow-sm" : "text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300")}
             >
               ID
             </button>
           </div>
 
-          {/* Barcode/QR Button */}
-          <button className="p-2.5 bg-zinc-100 dark:bg-zinc-900 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 transition-colors">
+          {/* QR Button */}
+          <button 
+            onClick={() => setShowQR(true)}
+            className="p-2.5 bg-zinc-100 dark:bg-zinc-900 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
+            title="Show QR Code"
+          >
             <QrCode className="w-5 h-5" />
           </button>
         </div>
@@ -104,38 +141,36 @@ export default function LinksPage() {
         {/* HEADER PROFIL */}
         <div className="flex flex-col items-center text-center gap-2 mb-6">
           <div className="w-[104px] h-[104px] rounded-full overflow-hidden bg-zinc-200 dark:bg-zinc-800 mb-2 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop" alt="Rifky Daffa" className="w-full h-full object-cover" />
+            {/* PASTIKAN MENGGANTI URL GAMBAR INI DENGAN FOTO ASLIMU */}
+            <img src="foto-profilku.jpg" alt="Rifky Daffa Pratama" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-[22px] font-bold tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight">
             Rifky Daffa Pratama
           </h1>
-          <span className="text-yellow-500 dark:text-yellow-400 font-semibold text-sm mt-0.5">{d.lblProfileRole}</span>
+          <span className="text-yellow-500 dark:text-yellow-400 font-semibold text-sm mt-0.5">Software Engineer</span>
           <span className="flex items-center gap-1.5 text-[13px] font-medium text-zinc-500 mt-1">
-            <MapPin className="w-3.5 h-3.5" /> {d.lblLocation}
+            <MapPin className="w-3.5 h-3.5" /> Bandung, Indonesia
           </span>
         </div>
 
         {/* SOSMED BULAT */}
         <div className="flex items-center justify-center gap-3.5 mb-10">
-          <SocialCircle icon={Github} href="https://github.com/SatriaBahari" />
+          <SocialCircle icon={Github} href="https://github.com/RifkyPrataama" />
           <SocialCircle icon={Linkedin} href="#" />
-          <SocialCircle icon={Instagram} href="#" />
+          <SocialCircle icon={Instagram} href="https://www.instagram.com/rifkyprataama" />
           <SocialCircle icon={TiktokIcon} href="#" />
-          <SocialCircle icon={ThreadsIcon} href="#" />
         </div>
 
-        {/* CONTAINER TAUTAN UTAMA */}
+        {/* CONTAINER TAUTAN UTAMA (Tanpa Github & LinkedIn) */}
         <div className="flex flex-col gap-4 w-full mb-8">
           <LinkCard title={d.btnPersonalWebsite} desc={d.descPersonalWebsite} icon={Globe} href="/" />
           <LinkCard title={d.btnReadCV} desc={d.descResume} icon={FileText} href="#" />
-          <LinkCard title={d.btnGithubProfile} desc={d.descGithub} icon={Github} href="https://github.com/SatriaBahari" />
-          <LinkCard title={d.btnLinkedInProfile} desc={d.descLinkedin} icon={Linkedin} href="#" />
           <LinkCard title={d.btnSaweria} desc={d.descSaweria} icon={Gift} href="#" />
         </div>
 
         <div className="w-full border-t border-zinc-200 dark:border-zinc-800 mb-8"></div>
 
-        {/* GET IN TOUCH SECTION (Email Box Bawah) */}
+        {/* GET IN TOUCH SECTION */}
         <div className="w-full bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-[24px] p-6 flex flex-col shadow-sm">
           <div className="w-[46px] h-[46px] bg-[#fff8e6] dark:bg-yellow-500/10 rounded-xl flex items-center justify-center mb-5 border border-yellow-100 dark:border-yellow-900/30">
             <Mail className="w-5 h-5 text-yellow-500" />

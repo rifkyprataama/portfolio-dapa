@@ -47,11 +47,6 @@ export const dict = {
     lblStartDate: "Start Date", lblEndDate: "End Date", lblAvgDaily: "Average Daily Coding Time", lblTotalWeek: "Total This Week", lblAllTime: "All-Time Coding",
     lblTopLanguages: "Top Languages", lblEditors: "Editors",
 
-    // Monkeytype
-    monkeytypeTitle: "Monkeytype Stats",
-    monkeytypeSubtitle: "Typing statistics and performance.",
-    lblTestsStarted: "Tests Started", lblTestsCompleted: "Tests Completed", lblTotalTime: "Total Typing Time", lblBio: "bio", lblKeyboard: "keyboard",
-
     // Guestbook UI Texts
     guestbookTitle: "Guestbook", 
     guestbookSubtitle: "Leave a message, share feedback, or just say hello!",
@@ -168,11 +163,6 @@ export const dict = {
     wakatimeSubtitle: "Aktivitas pengkodean selama 7 hari terakhir.",
     lblStartDate: "Tanggal Mulai", lblEndDate: "Tanggal Selesai", lblAvgDaily: "Rata-rata Waktu Ngoding Harian", lblTotalWeek: "Total Minggu Ini", lblAllTime: "Total Ngoding Keseluruhan",
     lblTopLanguages: "Bahasa Teratas", lblEditors: "Editor",
-
-    // Monkeytype
-    monkeytypeTitle: "Statistik Monkeytype",
-    monkeytypeSubtitle: "Statistik dan performa mengetik.",
-    lblTestsStarted: "Tes Dimulai", lblTestsCompleted: "Tes Selesai", lblTotalTime: "Total Waktu Mengetik", lblBio: "bio", lblKeyboard: "keyboard",
 
     // Guestbook UI Texts
     guestbookTitle: "Buku Tamu", 

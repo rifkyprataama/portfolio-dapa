@@ -24,11 +24,16 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  // GANTI DENGAN ACCESS KEY DARI EMAIL WEB3FORMS
+  // ACCESS KEY WEB3FORMS MILIKMU
   const WEB3FORMS_ACCESS_KEY = "c1a82515-4201-48e6-b16e-179f27ae799e"
 
   useEffect(() => setMounted(true), [])
   if (!mounted) return null
+
+  // Garis pemisah standar
+  const Divider = () => (
+    <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800/80 my-8"></div>
+  )
 
   const SocialCard = ({ colSpan, gradient, title, desc, btnText, Icon, href }: any) => (
     <a href={href} target="_blank" rel="noreferrer" className={cn("relative flex flex-col p-6 rounded-2xl overflow-hidden group transition-transform hover:-translate-y-1 hover:shadow-lg", gradient, colSpan)}>
@@ -43,12 +48,10 @@ export default function ContactPage() {
     </a>
   )
 
-  // FUNGSI PENGIRIMAN EMAIL YANG SUDAH DIPERBAIKI
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // 1. Simpan referensi form ke dalam variabel SEBELUM proses await
     const form = e.currentTarget 
     const formData = new FormData(form)
     formData.append("access_key", WEB3FORMS_ACCESS_KEY)
@@ -61,8 +64,8 @@ export default function ContactPage() {
       
       if (response.ok) {
         setIsSuccess(true)
-        form.reset() // 2. Gunakan variabel form yang sudah disimpan tadi
-        setTimeout(() => setIsSuccess(false), 5000) // 3. Sekarang ini akan dieksekusi dengan aman
+        form.reset() 
+        setTimeout(() => setIsSuccess(false), 5000) 
       }
     } catch (error) {
       console.error("Error sending email:", error)
@@ -72,39 +75,57 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-white dark:bg-zinc-950">
+    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-[#fafafa] dark:bg-zinc-950">
       {layout === 'topbar' && <Topbar />}
 
       <div className="max-w-6xl mx-auto pt-8 pb-16 px-6 sm:px-10 w-full flex-1 flex flex-col">
         <main className="flex flex-col md:flex-row gap-12 lg:gap-16 mt-6 flex-1">
           {layout === 'sidebar' && <Sidebar />}
 
-          <section className="flex-1 flex flex-col gap-8 mt-2 max-w-4xl">
+          <section className="flex-1 flex flex-col mt-2 max-w-4xl">
+            
+            {/* Header */}
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">{d.contactTitle}</h1>
               <p className="text-zinc-500 dark:text-zinc-400 text-base font-medium">{d.contactSubtitle}</p>
-              <div className="w-full border-t border-dashed border-zinc-300 dark:border-zinc-800 mt-2"></div>
             </div>
 
+            <Divider />
+
+            {/* Social Media Cards */}
             <div className="flex flex-col gap-4">
               <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">{d.findMe}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <SocialCard colSpan="md:col-span-2" gradient="bg-gradient-to-br from-red-600 to-red-800" title={d.stayInTouch} desc={d.stayInTouchDesc} btnText={d.btnGmail} Icon={Mail} href="mailto:daffa@example.com" />
-                <SocialCard gradient="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500" title={d.followJourney} desc={d.followJourneyDesc} btnText={d.btnInstagram} Icon={Instagram} href="#" />
-                <SocialCard gradient="bg-gradient-to-br from-blue-600 to-cyan-600" title={d.letsConnect} desc={d.letsConnectDesc} btnText={d.btnLinkedIn} Icon={Linkedin} href="#" />
-                <SocialCard gradient="bg-gradient-to-br from-zinc-700 to-zinc-900" title={d.joinFun} desc={d.joinFunDesc} btnText={d.btnTiktok} Icon={TiktokIcon} href="#" />
-                <SocialCard gradient="bg-gradient-to-br from-slate-800 to-black" title={d.exploreCode} desc={d.exploreCodeDesc} btnText={d.btnGithub} Icon={Github} href="#" />
+                
+                {/* 1. GANTI EMAIL DI SINI */}
+                <SocialCard colSpan="md:col-span-2" gradient="bg-gradient-to-br from-red-600 to-red-800" title={d.stayInTouch} desc={d.stayInTouchDesc} btnText={d.btnGmail} Icon={Mail} href="mailto:rifkydaffap@gmail.com" />
+                
+                {/* 2. GANTI LINK INSTAGRAM DI SINI */}
+                <SocialCard gradient="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500" title={d.followJourney} desc={d.followJourneyDesc} btnText={d.btnInstagram} Icon={Instagram} href="https://instagram.com/rifkyprataama" />
+                
+                {/* 3. GANTI LINK LINKEDIN DI SINI */}
+                <SocialCard gradient="bg-gradient-to-br from-blue-600 to-cyan-600" title={d.letsConnect} desc={d.letsConnectDesc} btnText={d.btnLinkedIn} Icon={Linkedin} href="" />
+                
+                {/* 4. GANTI LINK TIKTOK DI SINI */}
+                <SocialCard gradient="bg-gradient-to-br from-zinc-700 to-zinc-900" title={d.joinFun} desc={d.joinFunDesc} btnText={d.btnTiktok} Icon={TiktokIcon} href="" />
+                
+                {/* 5. GANTI LINK GITHUB DI SINI */}
+                <SocialCard gradient="bg-gradient-to-br from-slate-800 to-black" title={d.exploreCode} desc={d.exploreCodeDesc} btnText={d.btnGithub} Icon={Github} href="https://github.com/RifkyPrataama" />
+              
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 mt-4">
+            <Divider />
+
+            {/* Form Email */}
+            <div className="flex flex-col gap-4">
               <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">{d.orSend}</h2>
               
               <form className="flex flex-col gap-4 relative" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input 
                     type="text" 
-                    name="name" // WAJIB ADA NAME
+                    name="name" 
                     required
                     placeholder={d.lblName}
                     className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-shadow disabled:opacity-50"
@@ -112,7 +133,7 @@ export default function ContactPage() {
                   />
                   <input 
                     type="email" 
-                    name="email" // WAJIB ADA NAME
+                    name="email" 
                     required
                     placeholder={d.lblEmail}
                     className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-shadow disabled:opacity-50"
@@ -120,7 +141,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <textarea 
-                  name="message" // WAJIB ADA NAME
+                  name="message" 
                   required
                   placeholder={d.lblMessage}
                   rows={5}
@@ -140,7 +161,6 @@ export default function ContactPage() {
                   )}
                 </button>
 
-                {/* Notifikasi Sukses Melayang */}
                 {isSuccess && (
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3 font-bold animate-in fade-in zoom-in">
                     <CheckCircle2 className="w-6 h-6" /> Message Sent Successfully!
