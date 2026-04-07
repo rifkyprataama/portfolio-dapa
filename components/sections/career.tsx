@@ -9,7 +9,7 @@ import { supabase } from "@/lib/supabase"
 export function Career() {
   const { language } = useLanguageStore()
   const d = dict[language]
-  const [expandedId, setExpandedId] = useState<number | null>(1)
+  const [expandedId, setExpandedId] = useState<number | null>(null)
   
   // State untuk data Supabase
   const [careerJobs, setCareerJobs] = useState<any[]>([])

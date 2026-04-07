@@ -16,6 +16,11 @@ export default function UsesPage() {
   useEffect(() => setMounted(true), [])
   if (!mounted) return null
 
+  // Garis pemisah standar (Konsisten dengan halaman lain)
+  const Divider = () => (
+    <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800/80 my-8"></div>
+  )
+
   // Helper component untuk merender kategori
   const CategorySection = ({ title, icon: Icon, data }: { title: string, icon: any, data: any[] }) => (
     <section className="flex flex-col gap-6">
@@ -45,7 +50,7 @@ export default function UsesPage() {
   )
 
   return (
-    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-white dark:bg-zinc-950">
+    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-[#fafafa] dark:bg-zinc-950">
       {layout === 'topbar' && <Topbar />}
 
       <div className="max-w-6xl mx-auto pt-8 pb-16 px-6 sm:px-10 w-full flex-1 flex flex-col">
@@ -53,7 +58,7 @@ export default function UsesPage() {
           
           {layout === 'sidebar' && <Sidebar />}
 
-          <section className="flex-1 flex flex-col gap-12 mt-2">
+          <section className="flex-1 flex flex-col mt-2">
             
             {/* Header */}
             <div className="flex flex-col gap-4">
@@ -64,6 +69,8 @@ export default function UsesPage() {
                 {d.usesSubtitle}
               </p>
             </div>
+
+            <Divider />
 
             {/* Konten Kategori */}
             <div className="flex flex-col gap-14 max-w-4xl">

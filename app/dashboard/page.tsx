@@ -5,11 +5,9 @@ import { useLanguageStore } from "@/store/use-language-store"
 import { dict } from "@/lib/dictionaries" 
 import { Topbar } from "@/components/layout/topbar" 
 import { Sidebar } from "@/components/layout/sidebar"
-
-import { UmamiAnalytics } from "@/components/sections/umami-analytics"
 import { GithubActivity } from "@/components/sections/github-activity"
-import { WakatimeStats } from "@/components/sections/wakatime-stats" // IMPORT BARU
-import { MonkeytypeStats } from "@/components/sections/monkeytype-stats" // IMPORT BARU
+import { WakatimeStats } from "@/components/sections/wakatime-stats" // <-- 1. TAMBAHKAN IMPORT INI
+import { BlogPosts } from "@/components/sections/blog-posts"
 
 export default function DashboardPage() {
   const { layout } = useLayoutStore()
@@ -21,7 +19,7 @@ export default function DashboardPage() {
   if (!mounted) return null
 
   return (
-    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500">
+    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-[#fafafa] dark:bg-zinc-950">
       {layout === 'topbar' && <Topbar />}
 
       <div className="max-w-6xl mx-auto pt-8 pb-16 px-6 sm:px-10 w-full flex-1">
@@ -29,7 +27,7 @@ export default function DashboardPage() {
           
           {layout === 'sidebar' && <Sidebar />}
 
-          <section className="flex-1 flex flex-col gap-10 mt-2">
+          <section className="flex-1 flex flex-col mt-2">
             
             {/* Header Dashboard */}
             <div className="flex flex-col gap-4">
@@ -39,16 +37,15 @@ export default function DashboardPage() {
               <p className="text-zinc-500 dark:text-zinc-400 text-base font-medium">
                 {d.dashboardSubtitle}
               </p>
-              
-              <div className="w-full border-t border-dashed border-zinc-300 dark:border-zinc-700/70 mt-2 mb-2"></div>
             </div>
 
+            <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800/80 my-10"></div>
+
             {/* Kumpulan Widget Dashboard */}
-            <div className="flex flex-col gap-8 max-w-4xl">
-               <UmamiAnalytics />
+            <div className="flex flex-col gap-8 w-full max-w-4xl">
                <GithubActivity />
-               <WakatimeStats />     {/* TAMBAHKAN DI SINI */}
-               <MonkeytypeStats />   {/* TAMBAHKAN DI SINI */}
+               <WakatimeStats /> {/* <-- 2. TAMBAHKAN KOMPONEN INI DI BAWAH GITHUB */}
+               <BlogPosts />
             </div>
 
           </section>

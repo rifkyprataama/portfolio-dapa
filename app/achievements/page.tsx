@@ -17,8 +17,13 @@ export default function AchievementsPage() {
   useEffect(() => setMounted(true), [])
   if (!mounted) return null
 
+  // Garis pemisah standar (Konsisten dengan halaman lain)
+  const Divider = () => (
+    <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800/80 my-10"></div>
+  )
+
   return (
-    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500">
+    <div className="min-h-screen flex flex-col font-sans transition-colors duration-500 bg-[#fafafa] dark:bg-zinc-950">
       {layout === 'topbar' && <Topbar />}
 
       <div className="max-w-6xl mx-auto pt-8 pb-16 px-6 sm:px-10 w-full flex-1">
@@ -26,7 +31,7 @@ export default function AchievementsPage() {
           
           {layout === 'sidebar' && <Sidebar />}
 
-          <section className="flex-1 flex flex-col gap-10 mt-2">
+          <section className="flex-1 flex flex-col mt-2">
             
             {/* Header Bagian Pencapaian */}
             <div className="flex flex-col gap-4">
@@ -36,12 +41,12 @@ export default function AchievementsPage() {
               <p className="text-zinc-500 dark:text-zinc-400 text-base font-medium">
                 {d.achievementsSubtitle}
               </p>
-              
-              <div className="w-full border-t border-dashed border-zinc-300 dark:border-zinc-700/70 mt-2 mb-2"></div>
             </div>
 
+            <Divider />
+
             {/* Memanggil Komponen Daftar Pencapaian */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col">
                <AchievementsList />
             </div>
 
