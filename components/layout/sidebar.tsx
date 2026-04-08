@@ -41,7 +41,7 @@ export function Sidebar() {
       <div className="flex flex-col items-center text-center gap-4 pt-2">
         <div className="w-28 h-28 rounded-full bg-zinc-200 dark:bg-zinc-800 border-4 border-zinc-200 dark:border-zinc-800/50 shadow-lg overflow-hidden transition-all duration-300 hover:scale-105">
           <img 
-            src="foto-profilku.jpg" 
+            src="/foto-profilku.jpg" 
             alt="Profile" 
             className="w-full h-full object-cover" 
           />
