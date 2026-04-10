@@ -83,22 +83,17 @@ export const dict = {
     contactTitle: "Contact", contactSubtitle: "Let's get in touch.",
     findMe: "Find me on social media", orSend: "Or send me a message",
     lblName: "Name", lblEmail: "Email", lblMessage: "Message", btnSendEmail: "Send Email",
+    
     // Social Cards
     stayInTouch: "Stay in Touch", stayInTouchDesc: "Reach out via email for inquiries or collaborations.", btnGmail: "Go to Gmail",
     followJourney: "Follow My Journey", followJourneyDesc: "Follow my creative journey.", btnInstagram: "Go to Instagram",
     letsConnect: "Let's Connect", letsConnectDesc: "Connect with me professionally.", btnLinkedIn: "Go to LinkedIn",
     joinFun: "Join the Fun", joinFunDesc: "Watch engaging and fun content.", btnTiktok: "Go to Tiktok",
     exploreCode: "Explore the Code", exploreCodeDesc: "Explore my open-source work.", btnGithub: "Go to Github",
-
-    // Links UI Texts
-    linksTitle: "Links", linksSubtitle: "All my digital footprints in one place.",
-    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia",
     
     // Tautan dengan Deskripsinya
     btnPersonalWebsite: "Portfolio", descPersonalWebsite: "Personal website & portfolio",
     btnReadCV: "Resume CV", descResume: "Full Resume & CV",
-    btnGithubProfile: "GitHub", descGithub: "Explore my open-source code",
-    btnLinkedInProfile: "LinkedIn", descLinkedin: "Professional connections",
     btnSaweria: "Donasi Tiptap", descSaweria: "Support my work via custom donation",
     
     // Kartu Get in Touch
@@ -143,8 +138,8 @@ export const dict = {
     projectsTitle: "Proyek", projectsSubtitle: "Etalase proyek pribadi dan sumber terbuka yang saya buat atau kontribusikan.", lblOverview: "Gambaran Umum", lblTechStack: "Tumpukan Teknologi", lblFeatures: "Fitur Utama", lblRole: "Peran Saya", lblChallenges: "Tantangan & Solusi", btnViewDetail: "Lihat Detail", btnVisitRepo: "Kunjungi Repositori", btnLiveDemo: "Demo Langsung", btnBack: "Kembali",
 
     // Dashboard UI Texts
-    dashboardTitle: "Dasbor",
-    dashboardSubtitle: "Dasbor pribadi saya, memvisualisasikan statistik dan aktivitas pengembangan.",
+    dashboardTitle: "Dashboard",
+    dashboardSubtitle: "Dashboard pribadi saya, memvisualisasikan statistik dan aktivitas pengembangan.",
     
     // Umami
     umamiTitle: "Analitik Lalu Lintas",
@@ -200,22 +195,17 @@ export const dict = {
     contactTitle: "Kontak", contactSubtitle: "Mari tetap terhubung.",
     findMe: "Temukan saya di media sosial", orSend: "Atau kirimkan saya pesan",
     lblName: "Nama", lblEmail: "Email", lblMessage: "Pesan", btnSendEmail: "Kirim Email",
+
     // Social Cards
     stayInTouch: "Tetap Terhubung", stayInTouchDesc: "Hubungi via email untuk pertanyaan atau kolaborasi.", btnGmail: "Buka Gmail",
     followJourney: "Ikuti Perjalanan Saya", followJourneyDesc: "Ikuti perjalanan kreatif saya.", btnInstagram: "Buka Instagram",
     letsConnect: "Mari Terhubung", letsConnectDesc: "Terhubung dengan saya secara profesional.", btnLinkedIn: "Buka LinkedIn",
     joinFun: "Ikuti Keseruannya", joinFunDesc: "Tonton konten yang menarik dan menyenangkan.", btnTiktok: "Buka Tiktok",
     exploreCode: "Eksplorasi Kode", exploreCodeDesc: "Jelajahi karya sumber terbuka saya.", btnGithub: "Buka Github",
-
-    // Links UI Texts
-    linksTitle: "Tautan", linksSubtitle: "Semua jejak digital saya di satu tempat.",
-    lblProfileRole: "Software Engineer", lblLocation: "Jambi, Indonesia",
     
     // Tautan dengan Deskripsinya
     btnPersonalWebsite: "Portofolio", descPersonalWebsite: "Situs web pribadi & portofolio",
     btnReadCV: "Resume CV", descResume: "Resume & CV Lengkap",
-    btnGithubProfile: "GitHub", descGithub: "Eksplorasi kode sumber terbuka",
-    btnLinkedInProfile: "LinkedIn", descLinkedin: "Koneksi profesional",
     btnSaweria: "Donasi Tiptap", descSaweria: "Dukung karya saya melalui donasi",
     
     // Kartu Get in Touch
