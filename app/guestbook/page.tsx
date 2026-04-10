@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { Send, Github, Loader2, MessageSquare, LogOut, Reply, X } from "lucide-react" // Tambah ikon Reply & X
+import { Send, Github, Loader2, MessageSquare, LogOut, Reply, X } from "lucide-react" 
 import { useLayoutStore } from "@/store/use-layout-store"
 import { useLanguageStore } from "@/store/use-language-store" 
 import { dict } from "@/lib/dictionaries" 
@@ -20,7 +20,6 @@ export default function GuestbookPage() {
   const [isSending, setIsSending] = useState(false)
   const [session, setSession] = useState<any>(null)
   
-  // STATE BARU UNTUK FITUR REPLY
   const [replyingTo, setReplyingTo] = useState<any | null>(null)
 
   const formatDate = (dateString: string) => {
@@ -54,6 +53,12 @@ export default function GuestbookPage() {
     return () => subscription.unsubscribe()
   }, [])
 
+  // Hook untuk mengubah judul Tab secara dinamis
+  useEffect(() => {
+    const pageTitle = language === "ID" ? "Buku Tamu" : "Guestbook";
+    document.title = `${pageTitle} | Rifky Pratama`;
+  }, [language]);
+
   const handleLogin = async () => {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
@@ -77,12 +82,12 @@ export default function GuestbookPage() {
       user_name: userMeta.full_name || userMeta.user_name || 'Anonymous',
       user_avatar: userMeta.avatar_url,
       message: newMessage,
-      parent_id: replyingTo ? replyingTo.id : null // Simpan ID pesan yang dibalas
+      parent_id: replyingTo ? replyingTo.id : null 
     }])
 
     if (!error) {
       setNewMessage("") 
-      setReplyingTo(null) // Reset state reply setelah terkirim
+      setReplyingTo(null) 
       fetchMessages()   
     }
     
@@ -125,13 +130,11 @@ export default function GuestbookPage() {
                 <div className="flex justify-center p-10"><Loader2 className="w-6 h-6 animate-spin text-zinc-500" /></div>
               ) : (
                 messages.map((msg) => {
-                  // Cari data pesan asli (parent) jika ini adalah sebuah balasan
                   const parentMsg = msg.parent_id ? messages.find(m => m.id === msg.parent_id) : null;
 
                   return (
                     <div key={msg.id} className="relative flex flex-col px-4 py-2 hover:bg-zinc-100 dark:hover:bg-[#2b2d31] transition-colors group">
                       
-                      {/* Tombol Reply Melayang (Muncul saat di-hover) */}
                       {session && (
                         <div className="absolute right-4 -top-3 opacity-0 group-hover:opacity-100 transition-opacity bg-white dark:bg-[#313338] border border-zinc-200 dark:border-zinc-700 rounded-md shadow-sm z-10 flex">
                           <button 
@@ -144,10 +147,8 @@ export default function GuestbookPage() {
                         </div>
                       )}
 
-                      {/* Tampilan Konteks Balasan (Discord Style Reply Line) */}
                       {parentMsg && (
                         <div className="flex items-center gap-2 text-[13px] text-zinc-500 mb-1 ml-11 relative select-none">
-                          {/* Garis Melengkung ala Discord */}
                           <div className="absolute -left-8 top-1/2 w-6 h-[18px] border-l-2 border-t-2 border-zinc-300 dark:border-[#4e5058] rounded-tl-lg -translate-y-[100%]"></div>
                           
                           <img src={parentMsg.user_avatar} alt={parentMsg.user_name} className="w-4 h-4 rounded-full" />
@@ -176,10 +177,8 @@ export default function GuestbookPage() {
               )}
             </div>
 
-            {/* Area Kotak Input */}
             <div className="p-4 bg-white dark:bg-[#313338] shrink-0 pb-6 relative">
               
-              {/* Indikator Sedang Membalas (Muncul di atas kotak input) */}
               {replyingTo && (
                 <div className="absolute bottom-full left-4 right-4 bg-zinc-100 dark:bg-[#2b2d31] border border-b-0 border-zinc-200 dark:border-zinc-700/50 rounded-t-lg px-4 py-2 flex items-center justify-between mb-0 translate-y-4 pb-5 z-0">
                   <div className="flex items-center gap-2 text-xs font-medium text-zinc-500 dark:text-zinc-400">

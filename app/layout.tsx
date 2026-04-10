@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { CommandPalette } from "@/components/layout/command-palette"; // Mengimpor CommandPalette
-import { FloatingButtons } from "@/components/layout/floating-buttons"; // Mengimpor FloatingButtons
+import { CommandPalette } from "@/components/layout/command-palette";
+import { FloatingButtons } from "@/components/layout/floating-buttons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +15,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// DI SINI LETAK PERUBAHANNYA
 export const metadata: Metadata = {
-  title: "Daffa Pratama | Frontend Engineer",
+  title: {
+    default: "Rifky Pratama | Portfolio", // Muncul di halaman utama (Home)
+    template: "%s | Rifky Pratama",       // Template otomatis untuk halaman lain
+  },
   description: "Personal portfolio showcasing digital solutions.",
+  icons: {
+    // Trik menggunakan emoji laptop sebagai favicon sementara
+    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💻</text></svg>',
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +40,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system" // Kembali ke system theme
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

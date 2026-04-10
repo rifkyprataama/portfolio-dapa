@@ -6,7 +6,7 @@ import { dict } from "@/lib/dictionaries"
 import { Topbar } from "@/components/layout/topbar" 
 import { Sidebar } from "@/components/layout/sidebar"
 import { GithubActivity } from "@/components/sections/github-activity"
-import { WakatimeStats } from "@/components/sections/wakatime-stats" // <-- 1. TAMBAHKAN IMPORT INI
+import { WakatimeStats } from "@/components/sections/wakatime-stats" 
 import { BlogPosts } from "@/components/sections/blog-posts"
 
 export default function DashboardPage() {
@@ -16,6 +16,13 @@ export default function DashboardPage() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
+
+  // Hook untuk mengubah judul Tab secara dinamis
+  useEffect(() => {
+    const pageTitle = language === "ID" ? "Dasbor" : "Dashboard";
+    document.title = `${pageTitle} | Rifky Pratama`;
+  }, [language]);
+
   if (!mounted) return null
 
   return (
@@ -44,7 +51,7 @@ export default function DashboardPage() {
             {/* Kumpulan Widget Dashboard */}
             <div className="flex flex-col gap-8 w-full max-w-4xl">
                <GithubActivity />
-               <WakatimeStats /> {/* <-- 2. TAMBAHKAN KOMPONEN INI DI BAWAH GITHUB */}
+               <WakatimeStats /> 
                <BlogPosts />
             </div>
 
