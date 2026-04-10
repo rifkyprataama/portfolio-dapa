@@ -28,6 +28,13 @@ export default function ContactPage() {
   const WEB3FORMS_ACCESS_KEY = "c1a82515-4201-48e6-b16e-179f27ae799e"
 
   useEffect(() => setMounted(true), [])
+
+  // Hook untuk mengubah judul Tab secara dinamis
+  useEffect(() => {
+    const pageTitle = language === "ID" ? "Kontak" : "Contact";
+    document.title = `${pageTitle} | Rifky Pratama`;
+  }, [language]);
+
   if (!mounted) return null
 
   // Garis pemisah standar

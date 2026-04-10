@@ -15,6 +15,13 @@ export default function ProjectsPage() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
+
+  // Hook untuk mengubah judul Tab secara dinamis
+  useEffect(() => {
+    const pageTitle = language === "ID" ? "Proyek" : "Projects";
+    document.title = `${pageTitle} | Rifky Pratama`;
+  }, [language]);
+
   if (!mounted) return null
 
   // Garis pemisah standar (Konsisten dengan halaman lain)

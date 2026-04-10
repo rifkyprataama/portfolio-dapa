@@ -15,7 +15,15 @@ export default function About() {
   const d = dict[language]
   const [mounted, setMounted] = useState(false)
 
+  // 1. Hook untuk mencegah hydration mismatch
   useEffect(() => setMounted(true), [])
+
+  // 2. Hook BARU untuk mengubah judul Tab secara dinamis berdasarkan bahasa
+  useEffect(() => {
+    const pageTitle = language === "ID" ? "Tentang" : "About";
+    document.title = `${pageTitle} | Rifky Pratama`;
+  }, [language]); // Akan dipanggil ulang setiap kali 'language' berubah
+
   if (!mounted) return null
 
   // Garis pemisah standar (Sama dengan Home & Sidebar)

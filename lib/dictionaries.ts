@@ -5,15 +5,15 @@ export const dict = {
     
     // Home Page
     greeting: "Hi, I'm Rifky Daffa Pratama", basedIn: "Based in Bandung, Indonesia", 
-    desc1: "A Software Engineer dedicated to building impactful digital solutions. I specialize in developing scalable web platforms and applications using a modern tech stack, primarily focusing on frontend architecture, Next.js, TypeScript, and seamless user experiences.", 
-    desc2: "My approach combines technical expertise with a strong emphasis on clean, maintainable code. I thrive in crafting software that is well-structured and aligned with business goals, ensuring every project delivers logical clarity and a meaningful real-world impact.", 
+    desc1: "A versatile Software Engineer dedicated to building impactful digital solutions. I specialize in developing scalable web platforms and mobile applications using modern tech stacks, bridging the gap between seamless user interfaces and robust backend architectures.", 
+    desc2: "My approach combines technical expertise with a strong emphasis on clean, maintainable code. From optimizing databases to crafting intuitive experiences, I thrive in delivering software that is well-structured, aligned with business goals, and creates meaningful real-world impact.", 
     skillsTitle: "Skills", skillsSubtitle: "My professional skills.",
 
     // About Page
     aboutTitle: "About", aboutSubtitle: "A brief introduction to who I am.", 
-    aboutP1: "I'm Daffa Pratama, a Bandung-based Software Engineer dedicated to building impactful digital solutions. I specialize in developing web platforms and applications using a modern tech stack, including Next.js, TypeScript, and exploring mobile development with Flutter.", 
-    aboutP2: "My primary focus is crafting software architecture that doesn't just work but is well-structured, maintainable, and scalable to meet business needs. I believe that high-quality code must go hand-in-hand with system efficiency and logical clarity.", 
-    aboutP3: "I blend technical expertise with proactive communication, critical thinking, and effective problem-solving. Whether I am experimenting with Docker containers, developing full-stack environments, or exploring Machine Learning concepts, I thrive in collaborative environments and leverage my skills to ensure every project delivers optimal results.", 
+    aboutP1: "I'm Rifky Daffa Pratama, a Bandung-based Software Engineer dedicated to building impactful digital solutions. I specialize in developing scalable web platforms using Next.js and TypeScript, alongside crafting cross-platform mobile experiences with Flutter.", 
+    aboutP2: "My primary focus is architecting software that doesn't just work, but is well-structured, maintainable, and optimized for business needs. I believe that high-quality code must go hand-in-hand with system efficiency, robust databases, and logical clarity.", 
+    aboutP3: "I blend technical expertise with proactive communication and effective problem-solving. Whether I am orchestrating backend services with Docker, developing full-stack environments, or integrating Machine Learning concepts, I thrive in collaborative settings and leverage my skills to deliver optimal, real-world results.",
     regards: "Best regards,",
 
     // Career & Education
@@ -61,22 +61,22 @@ export const dict = {
     catCoding: "Coding & Development",
     catProductivity: "Design & Productivity",
     usesHardwareData: [
-      { name: "MacBook Pro 14\"", desc: "My primary workhorse. The M-series chip provides incredible performance and battery life for development." },
-      { name: "Rexus Mono Series 75%", desc: "A compact mechanical keyboard perfect for long coding sessions and saving desk space." },
-      { name: "Logitech MX Master 3S", desc: "The most ergonomic and productive mouse I've ever used, essential for navigating complex architectures." },
-      { name: "LG 27\" 4K Monitor", desc: "Provides crisp text and accurate colors, reducing eye strain during long hours of programming and UI design." }
+      { name: "Axioo Z10 Metal", desc: "My primary daily driver. A reliable laptop with solid performance capable of handling demanding full-stack development environments." },
+      { name: "Ajazz AK820", desc: "A compact mechanical keyboard with a satisfying typing feel, perfect for long coding sessions without finger fatigue." },
+      { name: "Rexus Q30", desc: "A practical and ergonomic wireless mouse. Highly reliable for navigating complex code architectures and daily UI design work." },
+      { name: "Xiaomi Gaming Monitor G24i", desc: "A high refresh rate monitor that makes scrolling through lines of code and testing web animations incredibly smooth and easy on the eyes." }
     ],
     usesCodingData: [
-      { name: "Visual Studio Code", desc: "My primary editor. I use a custom dark theme with 'JetBrains Mono' for clean, readable code." },
-      { name: "Cursor IDE", desc: "An AI-powered fork of VS Code that significantly speeds up my prototyping and debugging workflow." },
-      { name: "Warp Terminal", desc: "A blazingly fast, Rust-based terminal that makes navigating the CLI a seamless experience." },
-      { name: "Docker", desc: "Essential for containerizing applications and ensuring environments remain consistent across development and production." }
+      { name: "Visual Studio Code", desc: "My primary editor. I use a custom dark theme with the 'JetBrains Mono' font for optimal readability." },
+      { name: "Antigravity", desc: "Google's agent-first AI IDE. It significantly accelerates my workflow by delegating complex coding, prototyping, and testing tasks to autonomous agents." },
+      { name: "Laragon", desc: "A blazing fast and lightweight local development environment. My go-to tool for running Laravel projects and managing databases effortlessly." },
+      { name: "Docker", desc: "Essential for containerizing applications and ensuring consistent environments across development and production." }
     ],
     usesProductivityData: [
-      { name: "Figma", desc: "My go-to tool for designing UI/UX, wireframing, and creating design systems before writing any code." },
-      { name: "Notion", desc: "My second brain. Used extensively for task management, documentation, and project roadmaps." },
+      { name: "Figma", desc: "My go-to tool for UI/UX design, wireframing, and creating design systems before writing any code." },
+      { name: "ClickUp", desc: "My project command center. Used extensively for team task management, sprint tracking, and organizing development roadmaps." },
       { name: "Postman", desc: "An absolute necessity for testing, documenting, and interacting with REST APIs during backend development." },
-      { name: "Obsidian", desc: "For local, markdown-based knowledge management and taking quick technical notes." }
+      { name: "Gemini", desc: "My go-to smart AI assistant. Incredibly helpful for accelerating technical research, solving complex bugs, and drafting code logic efficiently." }
     ],
 
     // Contact UI Texts
@@ -117,15 +117,15 @@ export const dict = {
     
     // Home Page
     greeting: "Hai, Saya Rifky Daffa Pratama", basedIn: "Berbasis di Bandung, Indonesia", 
-    desc1: "Seorang Software Engineer yang berdedikasi untuk membangun solusi digital yang berdampak. Saya berspesialisasi dalam mengembangkan platform web dan aplikasi yang skalabel menggunakan tumpukan teknologi modern, dengan fokus utama pada arsitektur frontend, Next.js, TypeScript, dan pengalaman pengguna yang mulus.", 
-    desc2: "Pendekatan saya menggabungkan keahlian teknis dengan penekanan kuat pada kode yang bersih dan mudah dipelihara. Saya berkembang dalam merancang perangkat lunak yang terstruktur dengan baik dan selaras dengan tujuan bisnis, memastikan setiap proyek memberikan kejelasan logis dan dampak nyata yang bermakna.", 
+    desc1: "Seorang Software Engineer serbabisa yang berdedikasi membangun solusi digital berdampak tinggi. Saya berspesialisasi dalam mengembangkan platform web dan aplikasi mobile berskala besar menggunakan teknologi modern, menjembatani antarmuka pengguna yang mulus dengan arsitektur backend yang tangguh.", 
+    desc2: "Pendekatan saya menggabungkan keahlian teknis dengan penekanan kuat pada penulisan kode yang bersih dan mudah dipelihara. Dari optimasi database hingga perancangan pengalaman yang intuitif, saya selalu berusaha menghasilkan perangkat lunak yang terstruktur, sejalan dengan tujuan bisnis, dan memberikan dampak nyata.", 
     skillsTitle: "Keahlian", skillsSubtitle: "Keahlian profesional saya.",
 
     // About Page
     aboutTitle: "Tentang", aboutSubtitle: "Perkenalan singkat tentang siapa saya.", 
-    aboutP1: "Saya Daffa Pratama, seorang Software Engineer berbasis di Bandung yang berdedikasi membangun solusi digital berdampak. Saya berspesialisasi dalam mengembangkan platform web dan aplikasi menggunakan teknologi modern, termasuk Next.js, TypeScript, serta mengeksplorasi pengembangan seluler dengan Flutter.", 
-    aboutP2: "Fokus utama saya adalah merancang arsitektur perangkat lunak yang tidak hanya berfungsi, tetapi juga terstruktur dengan baik, mudah dipelihara, dan dapat diskalakan. Saya percaya kode berkualitas tinggi harus sejalan dengan efisiensi sistem dan kejelasan logika.", 
-    aboutP3: "Saya memadukan keahlian teknis dengan komunikasi proaktif, pemikiran kritis, dan pemecahan masalah yang efektif. Baik saat bereksperimen dengan Docker, mengembangkan full-stack, atau mengeksplorasi Machine Learning, saya berkembang dalam tim untuk memastikan setiap proyek memberikan hasil optimal.", 
+    aboutP1: "Saya Rifky Daffa Pratama, seorang Software Engineer berbasis di Bandung yang berdedikasi untuk membangun solusi digital berdampak tinggi. Saya berspesialisasi dalam mengembangkan platform web yang skalabel menggunakan Next.js dan TypeScript, serta merancang pengalaman aplikasi mobile lintas platform dengan Flutter.", 
+    aboutP2: "Fokus utama saya adalah merancang arsitektur perangkat lunak yang tidak sekadar berfungsi, tetapi juga terstruktur dengan baik, mudah dipelihara, dan dioptimalkan untuk kebutuhan bisnis. Saya percaya bahwa kode berkualitas tinggi harus berjalan seiring dengan efisiensi sistem, basis data yang tangguh, dan kejelasan logika.", 
+    aboutP3: "Saya memadukan keahlian teknis dengan komunikasi yang proaktif dan pemecahan masalah yang efektif. Baik saat mengorkestrasi layanan backend dengan Docker, mengembangkan ekosistem full-stack, maupun mengintegrasikan konsep Machine Learning, saya berkembang pesat dalam lingkungan kolaboratif dan selalu memastikan setiap proyek memberikan hasil yang optimal.",
     regards: "Salam hangat,",
 
     // Career & Education
@@ -173,22 +173,22 @@ export const dict = {
     catCoding: "Pengkodean & Pengembangan",
     catProductivity: "Desain & Productivity",
     usesHardwareData: [
-      { name: "MacBook Pro 14\"", desc: "Mesin utama saya. Chip M-series memberikan performa dan daya tahan baterai luar biasa untuk pengembangan." },
-      { name: "Rexus Mono Series 75%", desc: "Keyboard mekanik ringkas yang sempurna untuk sesi ngoding panjang dan menghemat ruang meja." },
-      { name: "Logitech MX Master 3S", desc: "Mouse paling ergonomis dan produktif yang pernah saya gunakan, penting untuk menavigasi arsitektur kompleks." },
-      { name: "Monitor LG 27\" 4K", desc: "Menyajikan teks tajam dan warna akurat, mengurangi ketegangan mata selama pemrograman dan desain UI." }
+      { name: "Axioo Z10 Metal", desc: "Mesin utama saya. Laptop dengan performa tangguh dan desain kokoh yang sanggup menangani berbagai environment pengembangan full-stack." },
+      { name: "Ajazz AK820", desc: "Keyboard mekanikal ringkas dengan typing feel yang memuaskan, sangat nyaman untuk sesi ngoding panjang tanpa membuat jari cepat lelah." },
+      { name: "Rexus Q30", desc: "Mouse nirkabel yang praktis dan ergonomis. Sangat andal untuk navigasi struktur kode yang kompleks dan desain UI sehari-hari." },
+      { name: "Xiaomi Gaming Monitor G24i", desc: "Monitor dengan refresh rate tinggi yang membuat aktivitas scrolling baris kode dan pengujian animasi website terasa sangat mulus di mata." }
     ],
     usesCodingData: [
       { name: "Visual Studio Code", desc: "Editor utama saya. Saya menggunakan tema gelap kustom dengan font 'JetBrains Mono' agar kode mudah dibaca." },
-      { name: "Cursor IDE", desc: "Cabang VS Code bertenaga AI yang secara signifikan mempercepat alur kerja pembuatan prototipe dan debugging saya." },
-      { name: "Warp Terminal", desc: "Terminal super cepat berbasis Rust yang membuat navigasi CLI menjadi pengalaman yang mulus." },
+      { name: "Antigravity", desc: "IDE canggih berbasis agen AI dari Google. Sangat mempercepat alur kerja saya mendelegasikan tugas coding kompleks, pembuatan prototipe, dan pengujian secara otonom." },
+      { name: "Laragon", desc: "Lingkungan pengembangan lokal (local environment) yang super cepat dan ringan. Alat andalan saya untuk menjalankan proyek Laravel dan mengelola database tanpa ribet." },
       { name: "Docker", desc: "Penting untuk mengemas aplikasi dan memastikan lingkungan yang konsisten antara pengembangan dan produksi." }
     ],
     usesProductivityData: [
       { name: "Figma", desc: "Alat andalan saya untuk merancang UI/UX, wireframing, dan membuat sistem desain sebelum menulis kode apa pun." },
-      { name: "Notion", desc: "Otak kedua saya. Digunakan secara ekstensif untuk manajemen tugas, dokumentasi, dan peta jalan proyek." },
+      { name: "ClickUp", desc: "Pusat komando proyek saya. Digunakan secara ekstensif untuk manajemen tugas tim, pelacakan sprint, dan mengatur peta jalan pengembangan." },
       { name: "Postman", desc: "Kebutuhan mutlak untuk menguji, mendokumentasikan, dan berinteraksi dengan REST API selama pengembangan backend." },
-      { name: "Obsidian", desc: "Untuk manajemen pengetahuan berbasis markdown lokal dan mencatat catatan teknis dengan cepat." }
+      { name: "Gemini", desc: "Asisten AI cerdas andalan saya. Sangat membantu untuk mempercepat riset teknis, memecahkan bug kompleks, dan menyusun logika kode dengan efisien." }
     ],
 
     // Contact UI Texts
