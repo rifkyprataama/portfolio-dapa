@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { CommandPalette } from "@/components/layout/command-palette";
 import { FloatingButtons } from "@/components/layout/floating-buttons";
+// 1. IMPORT KOMPONEN BARU DI SINI
+import { LayoutInitializer } from "@/components/layout/layout-initializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,16 +17,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// DI SINI LETAK PERUBAHANNYA
 export const metadata: Metadata = {
   title: {
-    default: "Rifky Pratama | Portfolio", // Muncul di halaman utama (Home)
-    template: "%s | Rifky Pratama",       // Template otomatis untuk halaman lain
+    default: "Rifky Pratama | Portfolio",
+    template: "%s | Rifky Pratama",
   },
   description: "Personal portfolio showcasing digital solutions.",
   icons: {
-    // Trik menggunakan emoji laptop sebagai favicon sementara
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💻</text></svg>',
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Rifky Pratama | Portfolio",
+    description: "A Software Engineer dedicated to building impactful digital solutions.",
+    url: "https://portfolio-rifkyprataama.vercel.app/",
+    siteName: "Rifky Pratama Portfolio",
   },
 };
 
@@ -44,6 +50,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* 2. PANGGIL DI SINI: Deteksi layar otomatis sebelum merender UI utama */}
+          <LayoutInitializer />
+          
           {/* Mendaftarkan Command Palette ke Layout */}
           <CommandPalette />
           
